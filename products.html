@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Supplements - Neolife Store</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://kit.fontawesome.com/a2d04b53a7.js" crossorigin="anonymous"></script>
+  
+  <style>
+      /* ===== PRODUCTS GRID ===== */
+.search-section {
+  text-align: center;
+  padding: 15px;
+  background: #f9f9f9;
+  margin-top: 70px;
+  margin-bottom: -30px;
+}
+
+.search-section input {
+  width: 80%;
+  max-width: 500px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  width: 90%;
+  margin: 30px auto;
+}
+
+.product-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: center;
+  padding: 15px;
+  transition: 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.product-card h3 {
+  font-size: 1rem;
+  color: #222;
+}
+
+.product-card p {
+  color: #0a8d48;
+  font-weight: bold;
+}
+
+.product-card button {
+  background: #0a8d48;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 15px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.product-card button:hover {
+  background: #067a3a;
+}
+
+/* Responsive Grid */
+@media (min-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .product-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+  </style>
+</head>
+<body>
+  <!-- ===== HEADER / NAVBAR ===== -->
+  <header>
+    <div class="logo">NeoLife<span>Store</span></div>
+    <nav>
+      <ul>
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#products">Shop</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="cart-icon"><a href="cart.html">
+      🛒<span id="cart-count">0</span></a>
+    <style>
+        .cart-icon a{
+            text-decoration: none;
+        }
+    </style></div>
+  </header>
+
+  <section class="search-section">
+    <input type="text" id="searchBox" placeholder="🔍 Search for supplements..." onkeyup="searchProducts()">
+  </section>
+
+  <section id="product-list" class="product-grid"></section>
+
+  <footer class="footer">
+    <p>© 2025 Neolife Supplements Store. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    // Example 40+ supplement products
+    const products = [
+      { id: 1, name: "Omega-3 Fish Oil", price: 25, img: "https://via.placeholder.com/200x200?text=Omega-3" },
+      { id: 2, name: "Vitamin C Complex", price: 15, img: "https://via.placeholder.com/200x200?text=Vitamin+C" },
+      { id: 3, name: "Calcium + Magnesium", price: 18, img: "95eb74a1-9f27-4e5b-a2e4-648f3ad58ec3_0_watermark.jpeg" },
+      { id: 4, name: "Multivitamin Daily", price: 22, img: "https://via.placeholder.com/200x200?text=Multivitamin" },
+      { id: 5, name: "Herbal Detox Blend", price: 28, img: "https://via.placeholder.com/200x200?text=Detox" },
+      { id: 6, name: "Protein Plus Shake", price: 35, img: "https://via.placeholder.com/200x200?text=Protein+Shake" },
+      { id: 7, name: "Joint Flex Formula", price: 27, img: "https://via.placeholder.com/200x200?text=Joint+Flex" },
+      { id: 8, name: "Immune Boost", price: 19, img: "https://via.placeholder.com/200x200?text=Immune+Boost" },
+      { id: 9, name: "Men’s Health Pack", price: 30, img: "https://via.placeholder.com/200x200?text=Men+Health" },
+      { id: 10, name: "Women’s Balance", price: 29, img: "https://via.placeholder.com/200x200?text=Women+Balance" },
+      { id: 11, name: "Hair, Skin & Nails", price: 26, img: "https://via.placeholder.com/200x200?text=Beauty" },
+      { id: 12, name: "Green Superfoods", price: 33, img: "https://via.placeholder.com/200x200?text=Greens" },
+      { id: 13, name: "Probiotic Complex", price: 23, img: "https://via.placeholder.com/200x200?text=Probiotic" },
+      { id: 14, name: "Energy Booster", price: 20, img: "https://via.placeholder.com/200x200?text=Energy" },
+      { id: 15, name: "Brain Focus Formula", price: 24, img: "https://via.placeholder.com/200x200?text=Brain" },
+      { id: 16, name: "Sleep Support", price: 18, img: "https://via.placeholder.com/200x200?text=Sleep" },
+      { id: 17, name: "Blood Sugar Control", price: 21, img: "https://via.placeholder.com/200x200?text=Blood+Sugar" },
+      { id: 18, name: "Detox Tea", price: 14, img: "https://via.placeholder.com/200x200?text=Detox+Tea" },
+      { id: 19, name: "Iron Boost", price: 19, img: "https://via.placeholder.com/200x200?text=Iron" },
+      { id: 20, name: "Collagen Peptides", price: 34, img: "https://via.placeholder.com/200x200?text=Collagen" },
+      { id: 21, name: "Liver Cleanse", price: 25, img: "https://via.placeholder.com/200x200?text=Liver" },
+      { id: 22, name: "Antioxidant Power", price: 29, img: "https://via.placeholder.com/200x200?text=Antioxidant" },
+      { id: 23, name: "Digestive Enzymes", price: 20, img: "https://via.placeholder.com/200x200?text=Digestive" },
+      { id: 24, name: "Keto Burn", price: 32, img: "https://via.placeholder.com/200x200?text=Keto+Burn" },
+      { id: 25, name: "Heart Health Formula", price: 28, img: "https://via.placeholder.com/200x200?text=Heart" },
+      { id: 26, name: "Vitamin D3 + K2", price: 22, img: "https://via.placeholder.com/200x200?text=Vitamin+D3" },
+      { id: 27, name: "Zinc Immunity", price: 17, img: "https://via.placeholder.com/200x200?text=Zinc" },
+      { id: 28, name: "Turmeric Curcumin", price: 25, img: "https://via.placeholder.com/200x200?text=Turmeric" },
+      { id: 29, name: "Chlorella", price: 20, img: "https://via.placeholder.com/200x200?text=Chlorella" },
+      { id: 30, name: "Spirulina", price: 21, img: "https://via.placeholder.com/200x200?text=Spirulina" },
+      { id: 31, name: "Whey Protein", price: 36, img: "https://via.placeholder.com/200x200?text=Whey" },
+      { id: 32, name: "Prenatal Vitamins", price: 23, img: "https://via.placeholder.com/200x200?text=Prenatal" },
+      { id: 33, name: "Ashwagandha Root", price: 24, img: "https://via.placeholder.com/200x200?text=Ashwagandha" },
+      { id: 34, name: "CoQ10 Ubiquinol", price: 31, img: "https://via.placeholder.com/200x200?text=CoQ10" },
+      { id: 35, name: "Eye Support", price: 19, img: "https://via.placeholder.com/200x200?text=Eye+Support" },
+      { id: 36, name: "Vitamin B12 Complex", price: 22, img: "https://via.placeholder.com/200x200?text=B12" },
+      { id: 37, name: "Electrolyte Hydration", price: 15, img: "https://via.placeholder.com/200x200?text=Electrolyte" },
+      { id: 38, name: "Herbal Stress Relief", price: 19, img: "https://via.placeholder.com/200x200?text=Stress+Relief" },
+      { id: 39, name: "Detox Capsules", price: 27, img: "https://via.placeholder.com/200x200?text=Detox+Capsules" },
+      { id: 40, name: "Muscle Recovery", price: 30, img: "https://via.placeholder.com/200x200?text=Recovery" },
+    ];
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    function renderProducts() {
+      const list = document.getElementById("product-list");
+      list.innerHTML = "";
+      products.forEach(p => {
+        const div = document.createElement("div");
+        div.classList.add("product-card");
+        div.innerHTML = `
+          <img src="${p.img}" alt="${p.name}">
+          <h3>${p.name}</h3>
+          <p>$${p.price}</p>
+          <button onclick="addToCart(${p.id})">Add to Cart</button>
+        `;
+        list.appendChild(div);
+      });
+      updateCartCount();
+    }
+
+    function addToCart(id) {
+      const product = products.find(p => p.id === id);
+      cart.push(product);
+      localStorage.setItem("cart", JSON.stringify(cart));
+      updateCartCount();
+      alert(`${product.name} added to cart!`);
+    }
+
+    function updateCartCount() {
+      document.getElementById("cart-count").innerText = cart.length;
+    }
+
+    function searchProducts() {
+      const query = document.getElementById("searchBox").value.toLowerCase();
+      const filtered = products.filter(p => p.name.toLowerCase().includes(query));
+      const list = document.getElementById("product-list");
+      list.innerHTML = "";
+      filtered.forEach(p => {
+        const div = document.createElement("div");
+        div.classList.add("product-card");
+        div.innerHTML = `
+          <img src="${p.img}" alt="${p.name}">
+          <h3>${p.name}</h3>
+          <p>$${p.price}</p>
+          <button onclick="addToCart(${p.id})">Add to Cart</button>
+        `;
+        list.appendChild(div);
+      });
+    }
+
+    renderProducts();
+  </script>
+</body>
+</html>
