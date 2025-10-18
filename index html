@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NeoLife Supplements Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== HEADER / NAVBAR ===== -->
+  <header>
+    <div class="logo">NeoLife<span>Store</span></div>
+    <nav>
+      <ul>
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#products">Shop</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="cart-icon"><a href="cart.html">
+      🛒<span id="cart-count">0</span></a>
+    <style>
+        .cart-icon a{
+            text-decoration: none;
+        }
+    </style></div>
+  </header>
+  <!-- ===== HERO SECTION ===== -->
+  <section id="home" class="hero">
+    <div class="hero-text">
+      <h1>Natural Supplements for Every Health Need 🌱</h1>
+      <p>Boost your wellness with 100% natural and effective supplements for your body, mind, and vitality.</p>
+      <a href="#products" class="btn">Shop Now</a>
+    </div>
+  </section>
+  
+  <!-- ===== PRODUCTS SECTION ===== -->
+<section id="products" class="products">
+  <h2>Our Top Supplements</h2>
+
+  <!-- 🧭 CATEGORY FILTERS -->
+  <div class="filter-container">
+    <button class="filter-btn active" data-category="all">All</button>
+    <button class="filter-btn" data-category="Immunity">Immunity</button>
+    <button class="filter-btn" data-category="Detox">Detox</button>
+    <button class="filter-btn" data-category="Energy">Energy</button>
+    <button class="filter-btn" data-category="Joint Support">Joint Support</button>
+    <button class="filter-btn" data-category="General Health">General Health</button>
+  </div>
+
+ <!-- 🔍 SEARCH BAR -->
+  <div class="search-container">
+    <input 
+      type="text" 
+      id="search-box" 
+      placeholder="Search supplements... (e.g. immune, detox, omega)"
+    >
+  </div>
+    <div class="product-grid" id="product-list"></div>
+
+</section>
+
+  <!-- ===== TESTIMONIALS SECTION ===== -->
+  <section id="testimonials" class="testimonials">
+    <h2>What Our Customers Say ❤️</h2>
+    <div class="slider">
+      <div class="slide active">
+        <p>“These supplements transformed my energy and health completely!”</p>caa
+        <h4>- Sarah W.</h4>
+      </div>
+      <div class="slide">
+        <p>“NeoLife products are 100% natural and truly effective for immune support.”</p>
+        <h4>- Michael B.</h4>
+      </div>
+      <div class="slide">
+        <p>“Excellent quality and fast delivery. Highly recommend!”</p>
+        <h4>- Angela T.</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT / FOOTER ===== -->
+  <footer id="contact">
+    <div class="footer-content">
+      <h3>NeoLife Store</h3>
+      <p>Premium Supplements for a Healthier You</p>
+      <p>Email: neolife247stores@gmail.com</p>
+      <p>Phone: +234 8085995394</p>
+      <div class="socials">
+        <a href="#">🌐</a>
+        <a href="#">📘</a>
+        <a href="#">📸</a>
+      </div>
+    </div>
+    <p class="footer-bottom">&copy; 2025 NeoLifeStore. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
