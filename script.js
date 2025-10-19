@@ -87,17 +87,17 @@ const products = [
   
   {
     name: "Chelated Cal-Mag with 500 IU Vitamin D3",
-    price: 35,
+    price: 35.71,
     category: "Joint Support",
     img: "1000073409-min.jpg",
     desc: "Highly bioavailable calcium, magnesium and 500 IU vitamin D3 for strong bones, teeth, nerve & muscle function and more."/* ===== PRODUCTS GRID ===== */
   },
   {
-    name: "Detox & Cleanse Formula",
-    price: 30,
-    category: "Detox",
-    img: "95eb74a1-9f27-4e5b-a2e4-648f3ad58ec3_0_watermark.jpeg",
-    desc: "Gently detoxify your system and feel lighter naturally."
+    name: "Full Motion",
+    price: 48.65,
+    category: "Joint Support",
+    img: "1000073411-min.jpg",
+    desc: "Glucosamine with herbs, phytonutrients, and minerals to help promote joint comfort and flexibility."
   },
   {
     name: "Joint Flex Capsules",
