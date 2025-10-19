@@ -41,39 +41,40 @@ setInterval(showSlides, 4000);
 // ===== PRODUCTS DATA =====
 const products = [
   {
-    name: "Immune Boost Complex",
-    price: 35,
+    name: "Pro Vitality-30 Sachets (Single)",
+    price: 76.74,
     category: "Immunity",
     img: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80",
-    desc: "Boost your immune system with natural vitamins and minerals."
+    desc: "Boost your immune system with Pro Vitality. Daily Whole Food Nutrition to help feed, protect, regulate and nourish your cells for lifelong health and vitality"
   },
   {
-    name: "Omega-3 Fish Oil",
-    price: 25,
-    category: "General Health",
+    name: "PhytoDefence - 30 Sachets (Single)",
+    price: 87.65,
+    category: "Defense",
     img: "https://images.unsplash.com/photo-1611078489935-0cb964de46f9?auto=format&fit=crop&w=800&q=80",
-    desc: "Heart and brain support with purified fish oil."
+    desc: "Daily phytonutrient protection with the power of 6 optimal servings of fruits and vegetables."
   },
   {
-    name: "Detox & Cleanse Formula",
-    price: 30,
+    name: "NeoLifeTea - 15 Sticks (Single)",
+    price: 53.39,
     category: "Detox",
     img: "95eb74a1-9f27-4e5b-a2e4-648f3ad58ec3_0_watermark.jpeg",
-    desc: "Gently detoxify your system and feel lighter naturally."
+    desc: "An energising herbal tea blend for a delicious and refreshing boost of energy."
   },
   {
-    name: "Joint Flex Capsules",
-    price: 40,
+    name: "Formula IV Plus - 60 Sachets (Single)",
+    price: 52.93,
     category: "Joint Support",
     img: "https://images.unsplash.com/photo-1604328698692-f76ea9498e76?auto=format&fit=crop&w=800&q=80",
-    desc: "Support mobility and flexibility with joint-strengthening herbs."
+    desc: "Formula IV with additional mineral support and 50% more Tre-en-en®. Iron-free formulation."
   },
   {
-    name: "Daily Multivitamin",
-    price: 22,
+    name: "Tre-en-en - 120 Capsules (Single)
+      ",
+    price: 35.72,
     category: "General Health",
     img: "95eb74a1-9f27-4e5b-a2e4-648f3ad58ec3_0_watermark.jpeg",
-    desc: "Essential nutrients for everyday energy and wellness."
+    desc: "Whole grain concentrates provide cellular nutrition for energy and vitality"
   },
   {
     name: "Herbal Energy Tonic",
