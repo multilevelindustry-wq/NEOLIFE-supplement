@@ -71,7 +71,7 @@ const products = [
   },
   {
     name: "Tre-en-en",
-    price: 35.72,
+    price: 45.72,
     category: "General Health",
     img: "1000073302-min.jpg",
     desc: "Whole grain concentrates provide cellular nutrition for energy and vitality"
@@ -86,11 +86,11 @@ const products = [
   
   
   {
-    name: "Omega-3 Fish Oil",
-    price: 25,
-    category: "General Health",
-    img: "https://images.unsplash.com/photo-1611078489935-0cb964de46f9?auto=format&fit=crop&w=800&q=80",
-    desc: "Heart and brain support with purified fish oil."/* ===== PRODUCTS GRID ===== */
+    name: "Chelated Cal-Mag with 500 IU Vitamin D3",
+    price: 35,
+    category: "Joint Support",
+    img: "1000073409-min.jpg",
+    desc: "Highly bioavailable calcium, magnesium and 500 IU vitamin D3 for strong bones, teeth, nerve & muscle function and more."/* ===== PRODUCTS GRID ===== */
   },
   {
     name: "Detox & Cleanse Formula",
