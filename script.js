@@ -100,14 +100,14 @@ const products = [
     desc: "Glucosamine with herbs, phytonutrients, and minerals to help promote joint comfort and flexibility."
   },
   {
-    name: "Joint Flex Capsules",
-    price: 40,
+    name: "Vegan D with Vitamin D₂/D₃",
+    price: 25.68,
     category: "Joint Support",
-    img: "https://images.unsplash.com/photo-1604328698692-f76ea9498e76?auto=format&fit=crop&w=800&q=80",
-    desc: "Support mobility and flexibility with joint-strengthening herbs."
+    img: "1000073413-min.jpg",
+    desc: "Naturally sourced, whole-food based vitamin D2 and D3 are required for the maintenance of strong bones and normal immune function.."
   },
   {
-    name: "Daily Multivitamin",
+    name: "Full Motion",
     price: 22,
     category: "General Health",
     img: "95eb74a1-9f27-4e5b-a2e4-648f3ad58ec3_0_watermark.jpeg",
