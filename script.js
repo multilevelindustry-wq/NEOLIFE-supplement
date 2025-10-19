@@ -51,28 +51,28 @@ const products = [
   {
     name: "PhytoDefence",
     price: 87.65,
-    category: "Defense",
+    category: "immunity",
     img: "1000073300-min.jpg",
     desc: "Daily phytonutrient protection with the power of phyto"
   },
   {
     name: "NeoLifeTea",
     price: 53.39,
-    category: "Fat and weight",
+    category: "Energy and fitness",
     img: "1000073299-min.jpg",
     desc: "An energising herbal tea blend for a delicious and refreshing boost of energy."
   },
   {
     name: "Formula IV Plus",
     price: 52.93,
-    category: "Joint Support",
+    category: "Mineral and vitamins",
     img: "1000073298-min.jpg",
     desc: "Formula IV with additional mineral support and 50% more Tre-en-en®"
   },
   {
     name: "Tre-en-en",
     price: 45.72,
-    category: "General Health",
+    category: "Mineral and vitamins",
     img: "1000073302-min.jpg",
     desc: "Whole grain concentrates provide cellular nutrition for energy and vitality"
   },
