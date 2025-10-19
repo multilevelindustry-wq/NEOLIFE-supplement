@@ -114,11 +114,11 @@ const products = [
     desc: "Phytonutrient power of cruciferous vegetables in a convenient tablet."
   },
   {
-    name: "Herbal Energy Tonic",
-    price: 28,
-    category: "Energy",
-    img: "95eb74a1-9f27-4e5b-a2e4-648f3ad58ec3_0_watermark.jpeg",
-    desc: "Natural herbs that help sustain energy and focus all day."
+    name: "Masculine Herbal Complex",
+    price: 48.64,
+    category: "Men's Health",
+    img: "1000073741-min.jpg",
+    desc: "Helps men regain renewed energy and physical vitality."
   }
 ];
       
