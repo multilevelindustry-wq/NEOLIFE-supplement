@@ -41,36 +41,35 @@ setInterval(showSlides, 4000);
 // ===== PRODUCTS DATA =====
 const products = [
   {
-    name: "Pro Vitality-30 Sachets (Single)",
+    name: "Pro Vitality",
     price: 76.74,
     category: "Immunity",
     img: "1000073301-min.jpg",
-    desc: "Boost your immune system with Pro Vitality. Daily Whole Food Nutrition to help feed, protect, regulate and nourish your cells for lifelong health and vitality"
+    desc: "Boost your immune system with Pro Vitality."
   },
   {
-    name: "PhytoDefence - 30 Sachets (Single)",
+    name: "PhytoDefence",
     price: 87.65,
     category: "Defense",
     img: "1000073300-min.jpg",
-    desc: "Daily phytonutrient protection with the power of 6 optimal servings of fruits and vegetables."
+    desc: "Daily phytonutrient protection with the power of phyto"
   },
   {
-    name: "NeoLifeTea - 15 Sticks (Single)",
+    name: "NeoLifeTea",
     price: 53.39,
-    category: "Detox",
+    category: "Fat and weight",
     img: "1000073299-min.jpg",
     desc: "An energising herbal tea blend for a delicious and refreshing boost of energy."
   },
   {
-    name: "Formula IV Plus - 60 Sachets (Single)",
+    name: "Formula IV Plus",
     price: 52.93,
     category: "Joint Support",
     img: "1000073298-min.jpg",
-    desc: "Formula IV with additional mineral support and 50% more Tre-en-en®. Iron-free formulation."
+    desc: "Formula IV with additional mineral support and 50% more Tre-en-en®"
   },
   {
-    name: "Tre-en-en - 120 Capsules (Single)
-      ",
+    name: "Tre-en-en",
     price: 35.72,
     category: "General Health",
     img: "1000073302-min.jpg",
