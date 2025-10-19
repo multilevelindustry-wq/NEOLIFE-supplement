@@ -42,7 +42,7 @@ setInterval(showSlides, 4000);
 // ===== PRODUCTS DATA =====
 const products = [
   {
-    name: "Powerful carotenoid nutrients from whole foods to support immunity",
+    name: "Carotenoid Complex",
     price: 49.78,
     category: "Immunity",
     img: "1000073407-min.jpg",
