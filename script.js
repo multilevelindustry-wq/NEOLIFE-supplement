@@ -38,14 +38,15 @@ setInterval(showSlides, 4000);
 
 
 
+
 // ===== PRODUCTS DATA =====
 const products = [
   {
-    name: "Pro Vitality",
-    price: 76.74,
+    name: "Immune Boost Complex",
+    price: 35,
     category: "Immunity",
-    img: "1000073301-min.jpg",
-    desc: "Boost your immune system with Pro Vitality."
+    img: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80",
+    desc: "Boost your immune system with natural vitamins and minerals."
   },
   {
     name: "PhytoDefence",
@@ -76,6 +77,43 @@ const products = [
     desc: "Whole grain concentrates provide cellular nutrition for energy and vitality"
   },
   {
+    name: "Pro Vitality",
+    price: 76.74,
+    category: "Immunity",
+    img: "1000073301-min.jpg",
+    desc: "Boost your immune system with Pro Vitality."
+  },
+  
+  
+  {
+    name: "Omega-3 Fish Oil",
+    price: 25,
+    category: "General Health",
+    img: "https://images.unsplash.com/photo-1611078489935-0cb964de46f9?auto=format&fit=crop&w=800&q=80",
+    desc: "Heart and brain support with purified fish oil."/* ===== PRODUCTS GRID ===== */
+  },
+  {
+    name: "Detox & Cleanse Formula",
+    price: 30,
+    category: "Detox",
+    img: "95eb74a1-9f27-4e5b-a2e4-648f3ad58ec3_0_watermark.jpeg",
+    desc: "Gently detoxify your system and feel lighter naturally."
+  },
+  {
+    name: "Joint Flex Capsules",
+    price: 40,
+    category: "Joint Support",
+    img: "https://images.unsplash.com/photo-1604328698692-f76ea9498e76?auto=format&fit=crop&w=800&q=80",
+    desc: "Support mobility and flexibility with joint-strengthening herbs."
+  },
+  {
+    name: "Daily Multivitamin",
+    price: 22,
+    category: "General Health",
+    img: "95eb74a1-9f27-4e5b-a2e4-648f3ad58ec3_0_watermark.jpeg",
+    desc: "Essential nutrients for everyday energy and wellness."
+  },
+  {
     name: "Herbal Energy Tonic",
     price: 28,
     category: "Energy",
@@ -83,6 +121,7 @@ const products = [
     desc: "Natural herbs that help sustain energy and focus all day."
   }
 ];
+      
 
 // ===== DISPLAY PRODUCTS =====
 const productList = document.getElementById("product-list");
