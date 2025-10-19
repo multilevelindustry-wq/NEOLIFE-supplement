@@ -42,11 +42,11 @@ setInterval(showSlides, 4000);
 // ===== PRODUCTS DATA =====
 const products = [
   {
-    name: "Immune Boost Complex",
-    price: 35,
+    name: "Powerful carotenoid nutrients from whole foods to support immunity",
+    price: 49.78,
     category: "Immunity",
-    img: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80",
-    desc: "Boost your immune system with natural vitamins and minerals."
+    img: "1000073407-min.jpg",
+    desc: "Powerful carotenoid nutrients from whole foods to support immunity."
   },
   {
     name: "PhytoDefence",
