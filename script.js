@@ -107,11 +107,11 @@ const products = [
     desc: "Naturally sourced, whole-food based vitamin D2 and D3 are required for the maintenance of strong bones and normal immune function.."
   },
   {
-    name: "Full Motion",
-    price: 22,
-    category: "General Health",
-    img: "95eb74a1-9f27-4e5b-a2e4-648f3ad58ec3_0_watermark.jpeg",
-    desc: "Essential nutrients for everyday energy and wellness."
+    name: "Cruciferous Plus",
+    price: 29.86,
+    category: "Men's Health",
+    img: "1000073415-min.jpg",
+    desc: "Phytonutrient power of cruciferous vegetables in a convenient tablet."
   },
   {
     name: "Herbal Energy Tonic",
