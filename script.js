@@ -44,28 +44,28 @@ const products = [
     name: "Pro Vitality-30 Sachets (Single)",
     price: 76.74,
     category: "Immunity",
-    img: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80",
+    img: "1000073301-min.jpg",
     desc: "Boost your immune system with Pro Vitality. Daily Whole Food Nutrition to help feed, protect, regulate and nourish your cells for lifelong health and vitality"
   },
   {
     name: "PhytoDefence - 30 Sachets (Single)",
     price: 87.65,
     category: "Defense",
-    img: "https://images.unsplash.com/photo-1611078489935-0cb964de46f9?auto=format&fit=crop&w=800&q=80",
+    img: "1000073300-min.jpg",
     desc: "Daily phytonutrient protection with the power of 6 optimal servings of fruits and vegetables."
   },
   {
     name: "NeoLifeTea - 15 Sticks (Single)",
     price: 53.39,
     category: "Detox",
-    img: "95eb74a1-9f27-4e5b-a2e4-648f3ad58ec3_0_watermark.jpeg",
+    img: "1000073299-min.jpg",
     desc: "An energising herbal tea blend for a delicious and refreshing boost of energy."
   },
   {
     name: "Formula IV Plus - 60 Sachets (Single)",
     price: 52.93,
     category: "Joint Support",
-    img: "https://images.unsplash.com/photo-1604328698692-f76ea9498e76?auto=format&fit=crop&w=800&q=80",
+    img: "1000073298-min.jpg",
     desc: "Formula IV with additional mineral support and 50% more Tre-en-en®. Iron-free formulation."
   },
   {
@@ -73,7 +73,7 @@ const products = [
       ",
     price: 35.72,
     category: "General Health",
-    img: "95eb74a1-9f27-4e5b-a2e4-648f3ad58ec3_0_watermark.jpeg",
+    img: "1000073302-min.jpg",
     desc: "Whole grain concentrates provide cellular nutrition for energy and vitality"
   },
   {
