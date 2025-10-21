@@ -151,10 +151,46 @@
       }
     }
   </style>
+  
+  <!-- 🔹 BASIC CSS LINK -->
+  <link rel="stylesheet" href="./style.css" />
+  
 </head>
 <body>
 
-  <h1>NeoLife Health Supplements 🌱</h1>
+    <!-- ===== HEADER / NAVBAR ===== -->
+  <header>
+    <div class="logo">NeoLife<span>Store</span></div>
+    <nav>
+      <ul>
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#products">Shop</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+  <button id="change-country" class="country-btn">🌍My Country</button>
+</div>
+<div class="cart-icon">
+    <a href="cart.html">🛒<span id="cart-count">0</span></a>
+  </div>
+    <style>
+        .cart-icon a{
+            text-decoration: none;
+        }
+    </style></div>
+    
+  </header>
+  <!-- ===== HERO SECTION ===== -->
+    <section id="home" class="hero-3">
+    <div class="hero-text">
+      <h1>Neolife Supplements for Every Health Need 🌱</h1>
+      <p>Boost your wellness with 100% natural and effective supplements for your body, mind, and vitality, Nourish, Restore, Thrive Neolife Supplements for a Balanced Life.</p>
+     <a href="#" class="btn shop-now">Shop Now</a>
+    </div>
+  </section>
+  <br>
 
   <div class="product-grid" id="productGrid"></div>
 
@@ -212,6 +248,7 @@
       grid.appendChild(card);
     });
   </script>
+    <script src="script.js"></script>
 </body>
   </html>
   
