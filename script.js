@@ -191,3 +191,129 @@ function filterProducts() {
   }
                  }
     
+
+// === COUNTRY POPUP + REDIRECT LOGIC ===
+
+// Open popup and detect country if not set
+const popup = document.getElementById("country-popup");
+const saveBtn = document.getElementById("save-country");
+const countrySelect = document.getElementById("country-select");
+const changeCountryBtn = document.getElementById("change-country");
+
+// Detect and suggest country automatically using IP API
+async function detectCountry() {
+  try {
+    const res = await fetch("https://ipapi.co/json/");
+    const data = await res.json();
+    const countryCode = data.country_code;
+
+    const countryMap = {
+      US: "us.html",
+      GB: "uk.hmtl",
+      NG: "ng.html",
+      CA: "ca.html",
+      AU: "au.html",
+    };
+
+    if (countryMap[countryCode]) {
+      countrySelect.value = countryMap[countryCode];
+    }
+  } catch (error) {
+    console.warn("Country detection failed:", error);
+  }
+}
+
+// Show popup only if no country is saved
+const savedCountry = localStorage.getItem("selectedCountry");
+if (!savedCountry) {
+  popup.style.display = "flex";
+  detectCountry();
+}
+
+// Save country and redirect
+saveBtn.addEventListener("click", () => {
+  const selected = countrySelect.value;
+  if (selected) {
+    localStorage.setItem("selectedCountry", selected);
+    window.location.href = selected;
+  } else {
+    alert("Please select your country before continuing.");
+  }
+});
+
+// Change country manually
+if (changeCountryBtn) {
+  changeCountryBtn.addEventListener("click", () => {
+    popup.style.display = "flex";
+    detectCountry();
+  });
+}
+
+// === HANDLE ALL "SHOP NOW" BUTTONS ===
+document.querySelectorAll(".shop-now").forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
+    const saved = localStorage.getItem("selectedCountry");
+
+    if (saved) {
+      window.location.href = saved;
+    } else {
+      popup.style.display = "flex";
+      detectCountry();
+    }
+  });
+});
+
+
+
+
+
+
+
+// === REDIRECT WHEN SHOP NOW IS CLICKED ===
+  if (shopNowBtn) {
+    shopNowBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      savedCountry = localStorage.getItem("userCountry");
+
+      if (savedCountry) {
+        window.location.href = savedCountry;
+      } else {
+        popup.style.display = "flex";
+      }
+    });
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+// === COUNTRY BUTTON AUTO UPDATE ===
+
+// Show correct country when page loads
+updateChangeCountryButton();
+
+
+// === POPUP OPEN WHEN BUTTON IS CLICKED ===
+if (changeCountryBtn) {
+  changeCountryBtn.addEventListener("click", () => {
+    document.getElementById("country-popup").style.display = "flex";
+  });
+}
+
+// === UPDATE BUTTON AFTER USER SELECTS COUNTRY ===
+const saveCountryBtn = document.getElementById("save-country");
+if (saveCountryBtn) {
+  saveCountryBtn.addEventListener("click", () => {
+    setTimeout(updateChangeCountryButton, 500); // update button after saving
+  });
+    }
+      
