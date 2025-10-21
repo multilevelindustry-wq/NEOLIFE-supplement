@@ -19,49 +19,80 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
-    <div class="cart-icon"><a href="cart.html">
-      🧺<span id="cart-count">0</span></a>
+    <div class="header-actions">
+  <button id="change-country" class="country-btn">🌍My Country</button>
+</div>
+<div class="cart-icon">
+    <a href="cart.html">🛒<span id="cart-count">0</span></a>
+  </div>
     <style>
         .cart-icon a{
             text-decoration: none;
         }
     </style></div>
+    
   </header>
   <!-- ===== HERO SECTION ===== -->
-  <section id="home" class="hero">
+    <section id="home" class="hero-3">
     <div class="hero-text">
-      <h1>Natural Supplements for Every Health Need 🌱</h1>
-      <p>Boost your wellness with 100% natural and effective supplements for your body, mind, and vitality.</p>
-      <a href="products.html" class="btn">Shop Now</a>
+      <h1>Neolife Supplements for Every Health Need 🌱</h1>
+      <p>Boost your wellness with 100% natural and effective supplements for your body, mind, and vitality, Nourish, Restore, Thrive Neolife Supplements for a Balanced Life.</p>
+     <a href="#" class="btn shop-now">Shop Now</a>
     </div>
   </section>
+  <br>
   
-  <!-- ===== PRODUCTS SECTION ===== -->
-<section id="products" class="products">
-  <h2>Neolife Supplements</h2>
+  
+  <section id="home" class="hero">
+    <div class="hero-text">
+      <h1>Potential Neolife Supplements for a Healthier, Happier You 🌱</h1>
+      <p>Purely Natural, Purely Effective Neolife Supplements for a Balanced Life 
+Transform Your Health with Neolife Expertly Crafted Supplements for a Vibrant Life </p>
+      <a href="#" class="btn shop-now">Shop Now</a>
+    </div>
+  </section>
+  <br>
 
-  <!-- 🧭 CATEGORY FILTERS -->
-  <div class="filter-container">
-    <button class="filter-btn active" data-category="all">All</button>
-    <button class="filter-btn" data-category="Immunity">Immunity</button>
-    <button class="filter-btn" data-category="Men's Health">Men's Health</button>
-    <button class="filter-btn" data-category="Energy">Women's Health</button>
-    <button class="filter-btn" data-category="Joint Support">Bone and Joint Support</button>
-    <button class="filter-btn" data-category="Energy and fitness">Energy and fitness</button>
-    <button class="filter-btn" data-category="Mineral and vitamins">Mineral and vitamins</button>
-  </div>
-  </div>
-
- <!-- 🔍 SEARCH BAR -->
-  <div class="search-container">
-    <input 
-      type="text" 
-      id="search-box" 
-      placeholder="Search supplements... (e.g. immune, detox, omega)"
-    >
-  </div>
-    <div class="product-grid" id="product-list"></div>
-
+   
+  <section id="home" class="hero-1">
+    <div class="hero-text">
+      <h1>Elevate Your Wellbeing 100% Natural Neolife Supplements for Body, Mind, and Spirit🌱</h1>
+      <p>Rooted in Nature, Built for Wellness Neolife Supplements for a Healthier Tomorrow, Nature's Power, Your Potential Neolife Supplements for Optimal Wellness</p>
+      <a href="#" class="btn shop-now">Shop Now</a>
+      
+    </div>
+  </section>
+  <br>
+  
+  <section id="home" class="hero-2">
+    <div class="hero-text">
+      <h1>Unleash Your Inner Strength Neolife Supplements for Energy, Vitality, and Overall Wellness 🌱</h1>
+      <p>Boost your wellness with 100% natural and effective supplements for your body, mind, and vitality, Healthy Living Starts Here Neolife Supplements for a Balanced You</p>
+      <a href="#" class="btn shop-now">Shop Now</a>
+      
+    </div>
+  </section>
+  <br>
+  
+  <section id="home" class="hero-4">
+    <div class="hero-text">
+      <h1>Unlock Your Best Self Neolife Supplements for Mind, Body, and Spirit Harmony 🌱</h1>
+      <p>Fuel Your Greatness Neolife Supplements for a Life of Energy and Purpose, Transform from the Inside Out Neolife Supplements for Holistic Wellness</p>
+     <a href="#" class="btn shop-now">Shop Now</a>
+    </div>
+  </section>
+  <br>
+  
+  
+  <section id="home" class="hero-5">
+    <div class="hero-text">
+      <h1>Nature's Remedies for a Better Life Neolife Supplements for Your Wellbeing🌱</h1>
+      <p>Wellness That Works Neolife Supplements for a Healthier, Happier You, Pure, Potent, and Proven Neolife Supplements for Your Health Journey.</p>
+     <a href="#" class="btn shop-now">Shop Now</a>
+    </div>
+  </section>
+  <br>
+  
 </section>
 
   <!-- ===== TESTIMONIALS SECTION ===== -->
@@ -82,6 +113,7 @@
       </div>
     </div>
   </section>
+  <br>
 
   <!-- ===== CONTACT / FOOTER ===== -->
   <footer id="contact">
@@ -98,7 +130,27 @@
     </div>
     <p class="footer-bottom">&copy; 2025 NeoLifeStore. All Rights Reserved.</p>
   </footer>
+  
+  <!-- ===== COUNTRY SELECT POPUP ===== -->
+<div id="country-popup" class="popup">
+  <div class="popup-content">
+    <h3>Select Your Country 🌍</h3>
+    <p>We’ll direct you to your country’s NeoLife Store.</p>
+    <select id="country-select">
+      <option value="">-- Choose your country --</option>
+      <option value="us.html">United States</option>
+      <option value="uk.html">United Kingdom</option>
+      <option value="ng.html">Nigeria</option>
+      <option value="ca.html">Canada</option>
+      <option value="au.html">Australia</option>
+    </select>
+    <button id="save-country">Continue</button>
+    please refresh your browser to save.!
+  </div>
+</div>
+
+  
 
   <script src="script.js"></script>
 </body>
-</html>
+  </html>
