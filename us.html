@@ -73,11 +73,11 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 5%;
+  padding: 15px 5%;
   background: #0a8d48;
   color: white;
   position: fixed;
-  width: 100%;
+  width: 80%;
   top: 0;
   z-index: 1000;
 }
@@ -347,6 +347,25 @@ header .logo span {
       grid.appendChild(card);
     });
   </script>
+
+<!-- ===== COUNTRY SELECT POPUP ===== -->
+<div id="country-popup" class="popup">
+  <div class="popup-content">
+    <h3>Select Your Country 🌍</h3>
+    <p>We’ll direct you to your country’s NeoLife Store.</p>
+    <select id="country-select">
+      <option value="">-- Choose your country --</option>
+      <option value="us.html">United States</option>
+      <option value="uk.html">United Kingdom</option>
+      <option value="ng.html">Nigeria</option>
+      <option value="ca.html">Canada</option>
+      <option value="au.html">Australia</option>
+    </select>
+    <button id="save-country">Continue</button>
+    please refresh your browser to save.!
+  </div>
+</div>
+  
     <script src="script.js"></script>
 </body>
   </html>
