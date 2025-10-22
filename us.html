@@ -74,7 +74,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px 5%;
-  background: white;
+  background: #0a8d48;
   color: white;
   position: fixed;
   width: 100%;
@@ -91,6 +91,63 @@ header .logo span {
   color: #ffe600;
 }
 
+    /* === COUNTRY POPUP STYLES === */
+.popup {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup-content {
+  background: #fff;
+  color: #222;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 320px;
+  width: 90%;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+}
+
+.popup-content select,
+.popup-content button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+.popup-content button {
+  background: #2d7a2f;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.popup-content button:hover {
+  background: #228b22;
+}
+.country-btn {
+  background-color: #2d7a2f;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.country-btn:hover {
+  background-color: #228b22;
+  transform: scale(1.03);
+}
 
 
     h1 {
