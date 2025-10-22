@@ -202,7 +202,84 @@
 
   <div class="product-grid" id="productGrid"></div>
 
+  <!-- ===== COUNTRY SELECT POPUP ===== -->
+<div id="country-popup" class="popup">
+  <div class="popup-content">
+    <h3>Select Your Country 🌍</h3>
+    <p>We’ll direct you to your country’s NeoLife Store.</p>
+    <select id="country-select">
+      <option value="">-- Choose your country --</option>
+      <option value="us.html">United States</option>
+      <option value="uk.html">United Kingdom</option>
+      <option value="ng.html">Nigeria</option>
+      <option value="ca.html">Canada</option>
+      <option value="au.html">Australia</option>
+    </select>
+    <button id="save-country">Continue</button>
+    please refresh your browser to save.!
+  </div>
+</div>
+  
   <script>
+// === COUNTRY POPUP + REDIRECT LOGIC === //
+
+<!-- Open popup and detect country if not set-->
+const popup = document.getElementById("country-popup");
+const saveBtn = document.getElementById("save-country");
+const countrySelect = document.getElementById("country-select");
+const changeCountryBtn = document.getElementById("change-country");
+
+// Detect and suggest country automatically using IP API
+async function detectCountry() {
+  try {
+    const res = await fetch("https://ipapi.co/json/");
+    const data = await res.json();
+    const countryCode = data.country_code;
+
+    const countryMap = {
+      US: "us.html",
+      GB: "uk.hmtl",
+      NG: "ng.html",
+      CA: "ca.html",
+      AU: "au.html",
+    };
+
+    if (countryMap[countryCode]) {
+      countrySelect.value = countryMap[countryCode];
+    }
+  } catch (error) {
+    console.warn("Country detection failed:", error);
+  }
+}
+
+// Show popup only if no country is saved
+const savedCountry = localStorage.getItem("selectedCountry");
+if (!savedCountry) {
+  popup.style.display = "flex";
+  detectCountry();
+}
+
+// Save country and redirect
+saveBtn.addEventListener("click", () => {
+  const selected = countrySelect.value;
+  if (selected) {
+    localStorage.setItem("selectedCountry", selected);
+    window.location.href = selected;
+  } else {
+    alert("Please select your country before continuing.");
+  }
+});
+
+// Change country manually
+if (changeCountryBtn) {
+  changeCountryBtn.addEventListener("click", () => {
+    popup.style.display = "flex";
+    detectCountry();
+  });
+ 
+}
+    
+  
     const products = [
       { name: "3 Day Detox (Single)", price: "$51.22", rating: 4.5, img: "1000075587-min.webp", link: "https://beta.neolife.com/peterezeudu/en-US/shop/product/3-day-detox-case" },
       { name: "3-Day Detox Limited Time Promo", price: "$38.42", rating: 4.7, img: "1000075590-min.webp", link: "https://beta.neolife.com/peterezeudu/en-US/shop/product/2025-detox-promo-2272" },
@@ -255,6 +332,28 @@
       `;
       grid.appendChild(card);
     });
+
+    // === COUNTRY BUTTON AUTO UPDATE ===
+
+// Show correct country when page loads
+updateChangeCountryButton();
+
+
+// === POPUP OPEN WHEN BUTTON IS CLICKED ===
+if (changeCountryBtn) {
+  changeCountryBtn.addEventListener("click", () => {
+    document.getElementById("country-popup").style.display = "flex";
+  });
+}
+
+// === UPDATE BUTTON AFTER USER SELECTS COUNTRY ===
+const saveCountryBtn = document.getElementById("save-country");
+if (saveCountryBtn) {
+  saveCountryBtn.addEventListener("click", () => {
+    setTimeout(updateChangeCountryButton, 500); // update button after saving
+  });
+    }
+      
   </script>
     <script src="script.js"></script>
 </body>
