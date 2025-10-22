@@ -213,6 +213,19 @@ async function detectCountry() {
       NG: "ng.html",
       CA: "ca.html",
       AU: "au.html",
+      AU: "au.html",
+      AU: "au.html",
+      AU: "au.html",
+      AU: "au.html",
+      AU: "au.html",
+      AU: "au.html",
+      AU: "au.html",
+      AU: "au.html",
+      AU: "au.html",
+      AU: "au.html",
+      AU: "au.html",
+      AU: "au.html",
+      AU: "au.html",
     };
 
     if (countryMap[countryCode]) {
