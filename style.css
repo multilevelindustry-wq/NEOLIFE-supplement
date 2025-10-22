@@ -71,7 +71,7 @@ header nav ul li a.active {
 
 /* ===== HERO ===== */
 .hero {
-  background: url('https://images.unsplash.com/photo-1599058917212-d750089bc07e?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+  background: url('https://www.neolifeshop.it/it/web_images/prd-nutritionals.jpg') center/cover no-repeat;
   height: 70vh;
   display: flex;
   justify-content: center;
@@ -82,23 +82,23 @@ header nav ul li a.active {
 }
 
 .hero-1 {
-  background: url('https://images.unsplash.com/photo-1620157694429-f0b568faba23?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=772') center/cover no-repeat;
+  background: url('https://www.neolifeshop.it/it/web_images/prd-skin-care.png') center/cover no-repeat;
   height: 70vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: black;
   text-align: center;
   padding: 0 10%;
 }
 
 .hero-2 {
-  background: url('https://plus.unsplash.com/premium_photo-1755882951389-3c3f0b7853e0?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=774') center/cover no-repeat;
+  background: url('https://www.neolifeshop.it/it/web_images/prd-home-care.jpg') center/cover no-repeat;
   height: 70vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: green;
   text-align: center;
   padding: 0 10%;
 }
