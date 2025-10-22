@@ -273,60 +273,7 @@ document.querySelectorAll(".shop-now").forEach((btn) => {
 
 
 
-    const products = [
-      { name: "3 Day Detox (Single)", price: "$51.22", rating: 4.5, img: "1000075587-min.webp", link: "https://beta.neolife.com/peterezeudu/en-US/shop/product/3-day-detox-case" },
-      { name: "3-Day Detox Limited Time Promo", price: "$38.42", rating: 4.7, img: "1000075590-min.webp", link: "https://beta.neolife.com/peterezeudu/en-US/shop/product/2025-detox-promo-2272" },
-      { name: "3 Step System Combination to Oily (Single)", price: "$197.16", rating: 4.0, img: "landingpage_l (1).webp", link: "https://beta.neolife.com/peterezeudu/en-US/shop/product/3-step-system-combination-to-oily" },
-      { name: "Acidophilus Plus (Single)", price: "$66.77", rating: 4.0, img: "landingpage_l (2).webp", link: "https://beta.neolife.com/peterezeudu/en-US/shop/product/acidophilus-plus" },
-      { name: "All Natural Fiber Food & Drink Mix (Single)", price: "$68.23", rating: 4.4, img: "landingpage_l (3).webp", link: "https://beta.neolife.com/peterezeudu/en-US/shop/product/all-natural-fiber-food-drink-mix" },
-      { name: "Aloe Vera Gel (Single)", price: "$22.63", rating: 4.5, img: "landingpage_l (5).webp", link: "https://beta.neolife.com/peterezeudu/en-US/shop/product/aloe-vera-gel" },
-      { name: "Aloe Vera Plus (Single)", price: "$39.93", rating: 5.0, img: "landingpage_l (4).webp", link: "https://beta.neolife.com/peterezeudu/en-US/shop/product/aloe-vera-plus" },
-      { name: "Beta-Gest Digestive Aid (Single)", price: "$36.76", rating: 4.5, img: "landingpage_l (7).webp", link: "https://beta.neolife.com/peterezeudu/en-US/shop/product/betagest-digestive-aid" },
-      { name: "Balancing Tonic (All Skin Types)", price: "$33.01", rating: 4.0, img: "landingpage_l (6).webp", link: "https://beta.neolife.com/peterezeudu/en-US/shop/product/balancing-tonic" },
-      { name: "Breakfast Solution (1v,1b)", price: "$$203.14", rating: 4.2, img: "landingpage_l (11).webp", link: "https://beta.neolife.com/peterezeudu/en-US/shop/product/breakfast-solution" },
-      { name: "Bio-Tone (Single)", price: "$$52.08", rating: 4.8, img: "landingpage_l (10).webp", link: "https://beta.neolife.com/peterezeudu/en-US/shop/product/biotone" },
-      { name: "Betagard (Single)", price: "$$58.32", rating: 4.6, img: "landingpage_l (9).webp", link: "https://beta.neolife.com/peterezeudu/en-US/shop/product/betagard" },
-      { name: "Beta-Zyme (Single)", price: "$$68.88", rating: 4.3, img: "landingpage_l (8).webp", link: "https://beta.neolife.com/peterezeudu/en-US/shop/product/betazyme" },
-      { name: "Breakfast Solution Performance Protein", price: "$229.16", rating: 3.9, img: "landingpage_l (12).webp", link: "https://beta.neolife.com/peterezeudu/en-US/shop/product/breakfast-solution-performance-protein" },
-      { name: "Breakfast Solution Pkts (1v,1b)", price: "$221.80", rating: 4.7, img: "landingpage_l (11).webp", link: "https://beta.neolife.com/peterezeudu/en-US/shop/product/breakfast-solution-packets" },
-      { name: "Carotenoid Complex (Single)", price: "$73.17", rating: 4.4, img: "landingpage_l (14).webp", link: "https://beta.neolife.com/peterezeudu/en-US/shop/product/carotenoid-complex" },
-      { name: "Chelated Cal-Mag with 1000 IU Vitamin D Tablet (Single)", price: "$40.54", rating: 4.9, img: "landingpage_l (15).webp", link: "https://beta.neolife.com/peterezeudu/en-US/shop/product/cal-mag-complex-w-1000iu-vit-d" },
-      { name: "Chelated Cal-Mag with 400 IU vitamin D Capsule (Single)", price: "$51.09", rating: 4.1, img: "landingpage_l (16).webp", link: "https://beta.neolife.com/peterezeudu/en-US/shop/product/chelated-calmag-with-400-iu-vitamin-d" },
-      { name: "Cleansing Gel (Single)", price: "$42.55", rating: 4.6, img: "landingpage_l (17).webp", link: "https://beta.neolife.com/peterezeudu/en-US/shop/product/cleansing-gel" },
-      { name: "Cleansing Milk (Single)", price: "$42.55", rating: 4.5, img: "landingpage_l (18).webp", link: "https://beta.neolife.com/peterezeudu/en-US/shop/product/cleansing-milk" },
-      { name: "CoQ10 (Single)", price: "$62.49", rating: 4.6, img: "landingpage_l (19).webp", link: "https://beta.neolife.com/peterezeudu/en-US/shop/product/coq10" },
-      { name: "Core3 (1v,1b)", price: "$278.60", rating: 4.7, img: "landingpage_l (20).webp", link: "https://beta.neolife.com/peterezeudu/en-US/shop/product/core3" },
-      { name: "Core3 Packets (1v,1b)", price: "$297.26", rating: 5.0, img: "landingpage_l (21).webp", link: "https://beta.neolife.com/peterezeudu/en-US/shop/product/core3-packets" },
-      { name: "Core3 Performance", price: "$304.62", rating: 5.0, img: "landingpage_l (22).webp", link: "https://beta.neolife.com/peterezeudu/en-US/shop/product/core3-performance-protein" },
-      { name: "3 Step System Normal to Dry (Single)", price: "$197.16", rating: 4.7, img: "landingpage_l (23).webp", link: "https://beta.neolife.com/peterezeudu/en-US/shop/product/3-step-system-normal-to-dry" }
-    ];
-
-    const grid = document.getElementById("productGrid");
-
-    function getStars(rating) {
-      const full = Math.floor(rating);
-      const half = rating % 1 !== 0;
-      let stars = "★".repeat(full);
-      if (half) stars += "½";
-      return stars;
-    }
-
-    products.forEach(p => {
-      const card = document.createElement("div");
-      card.className = "product-card";
-      card.innerHTML = `
-        <img src="${p.img}" alt="${p.name}">
-        <div class="product-info">
-          <h3>${p.name}</h3>
-          <span class="price">${p.price}</span>
-          <div class="stars">${getStars(p.rating)} (${p.rating})</div>
-          <a href="${p.link}" class="btn-view">View More</a>
-        </div>
-      `;
-      grid.appendChild(card);
-    });       
-
-
+    
 
 // === REDIRECT WHEN SHOP NOW IS CLICKED ===
   if (shopNowBtn) {
