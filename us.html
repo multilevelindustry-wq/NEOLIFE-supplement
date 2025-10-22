@@ -291,7 +291,25 @@ header .logo span {
   <br>
 
   <div class="product-grid" id="productGrid"></div>
-    
+
+<!-- ===== COUNTRY SELECT POPUP ===== -->
+<div id="country-popup" class="popup">
+  <div class="popup-content">
+    <h3>Select Your Country 🌍</h3>
+    <p>We’ll direct you to your country’s NeoLife Store.</p>
+    <select id="country-select">
+      <option value="">-- Choose your country --</option>
+      <option value="us.html">United States</option>
+      <option value="uk.html">United Kingdom</option>
+      <option value="ng.html">Nigeria</option>
+      <option value="ca.html">Canada</option>
+      <option value="au.html">Australia</option>
+    </select>
+    <button id="save-country">Continue</button>
+    please refresh your browser to save.!
+  </div>
+</div>
+  
   <script>
 // === COUNTRY POPUP + REDIRECT LOGIC === //
 
@@ -348,31 +366,8 @@ if (changeCountryBtn) {
     popup.style.display = "flex";
     detectCountry();
   });
+ 
 }
-
-// === HANDLE ALL "SHOP NOW" BUTTONS ===
-document.querySelectorAll(".shop-now").forEach((btn) => {
-  btn.addEventListener("click", (e) => {
-    e.preventDefault();
-    const saved = localStorage.getItem("selectedCountry");
-
-    if (saved) {
-      window.location.href = saved;
-    } else {
-      popup.style.display = "flex";
-      detectCountry();
-    }
-  });
-});
-
-
-
-
-
-
-
-
-
 
     const products = [
       { name: "3 Day Detox (Single)", price: "$51.22", rating: 4.5, img: "1000075587-min.webp", link: "https://beta.neolife.com/peterezeudu/en-US/shop/product/3-day-detox-case" },
@@ -429,31 +424,6 @@ document.querySelectorAll(".shop-now").forEach((btn) => {
 
 
 
-// === REDIRECT WHEN SHOP NOW IS CLICKED ===
-  if (shopNowBtn) {
-    shopNowBtn.addEventListener("click", (e) => {
-      e.preventDefault();
-      savedCountry = localStorage.getItem("userCountry");
-
-      if (savedCountry) {
-        window.location.href = savedCountry;
-      } else {
-        popup.style.display = "flex";
-      }
-    });
-  }
-  
-
-
-
-
-
-
-
-
-
-
-
 
 // === COUNTRY BUTTON AUTO UPDATE ===
 
@@ -476,27 +446,7 @@ if (saveCountryBtn) {
   });
     }
       
-  
-<!-- ===== COUNTRY SELECT POPUP ===== -->
-<div id="country-popup" class="popup">
-  <div class="popup-content">
-    <h3>Select Your Country 🌍</h3>
-    <p>We’ll direct you to your country’s NeoLife Store.</p>
-    <select id="country-select">
-      <option value="">-- Choose your country --</option>
-      <option value="us.html">United States</option>
-      <option value="uk.html">United Kingdom</option>
-      <option value="ng.html">Nigeria</option>
-      <option value="ca.html">Canada</option>
-      <option value="au.html">Australia</option>
-    </select>
-    <button id="save-country">Continue</button>
-    please refresh your browser to save.!
-  </div>
-</div>
-    </script>
-  
-    <script src="script.js"></script>
+  </script>
 </body>
   </html>
   
