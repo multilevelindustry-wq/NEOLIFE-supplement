@@ -318,9 +318,66 @@ document.getElementById("change-country").addEventListener("click", () => {
 // Initialize
 detectCountry();
 updateCountryButton();
+
+
+  // ===== CART LOGIC =====
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+document.getElementById("cart-count").innerText = cart.length;
+
+function addToCart(name, price, img) {
+  cart.push({ name, price, img });
+  localStorage.setItem("cart", JSON.stringify(cart));
+  document.getElementById("cart-count").innerText = cart.length;
+  alert(`${name} added to your cart!`);
+}
+
+
+
+
+// ===== TESTIMONIAL SLIDER =====
+let slideIndex = 0;
+const slides = document.querySelectorAll(".slide");
+
+function showSlides() {
+  slides.forEach(s => s.classList.remove("active"));
+  slideIndex = (slideIndex + 1) % slides.length;
+  slides[slideIndex].classList.add("active");
+}
+setInterval(showSlides, 4000);
+
+
+// === HANDLE ALL "SHOP NOW" BUTTONS ===
+document.querySelectorAll(".shop-now").forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
+    const saved = localStorage.getItem("selectedCountry");
+
+    if (saved) {
+      window.location.href = saved;
+    } else {
+      popup.style.display = "flex";
+      detectCountry();
+    }
+  });
+});
+
+
+// === REDIRECT WHEN SHOP NOW IS CLICKED ===
+  if (shopNowBtn) {
+    shopNowBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      savedCountry = localStorage.getItem("userCountry");
+
+      if (savedCountry) {
+        window.location.href = savedCountry;
+      } else {
+        popup.style.display = "flex";
+      }
+    });
+        }
 </script>
 
-  <script src="script.js"></script>
+  
   
 </body>
   </html>
