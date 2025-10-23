@@ -209,10 +209,10 @@ async function detectCountry() {
 
     const countryMap = {
       US: "https://beta.neolife.com/peterezeudu/en-US/shop",
-      GB: "uk.hmtl",
+      GB: "https://shopneolife.com/peterezeudu/shop/atoz",
       NG: "https://shopneolife.com/peterezeudu/shop/atoz",
       CA: "https://beta.neolife.com/peterezeudu/en-CA/shop",
-      AU: "au.html",
+      AU: "https://shopneolife.com/peterezeudu/shop/atoz",
       ZA: "https://shopneolife.com/peterezeudu/shop/atoz",
       TZ: "https://shopneolife.com/peterezeudu/shop/atoz",
       BJ: "https://shopneolife.com/peterezeudu/shop/atoz",
