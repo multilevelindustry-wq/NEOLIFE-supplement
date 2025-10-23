@@ -209,7 +209,7 @@
     <select id="country-select">
   <option value="">-- Choose your country --</option>
   <option value="https://beta.neolife.com/peterezeudu/en-US/shop" data-code="US">United States 🇺🇸</option>
-  <option value="https://shopneolife.com/peterezeudu/shop/uk" >United Kingdom 🇬🇧</option>
+  <option value="https://shopneolife.com/peterezeudu/shop/uk" data-code="UK">United Kingdom 🇬🇧</option>
   <option value="https://shopneolife.com/peterezeudu/shop/ng" data-code="NG">Nigeria 🇳🇬</option>
   <option value="https://beta.neolife.com/peterezeudu/en-CA/shop" data-code="CA">Canada 🇨🇦</option>
   <option value="https://shopneolife.com/peterezeudu/shop/au" data-code="AU">Australia 🇦🇺</option>
@@ -241,7 +241,7 @@
   </div>
 </div>
 
-  <script>
+<script>
 // === SAVE COUNTRY SELECTION ===
 document.getElementById("save-country").addEventListener("click", function() {
   const select = document.getElementById("country-select");
@@ -252,37 +252,73 @@ document.getElementById("save-country").addEventListener("click", function() {
     const countryURL = selectedOption.value;
     const countryCode = selectedOption.dataset.code;
 
-    // Save selections
+    // Save user choice
     localStorage.setItem("userCountryName", countryName);
     localStorage.setItem("userCountryURL", countryURL);
     localStorage.setItem("userCountryCode", countryCode);
 
-    // Redirect to correct shop page
+    // Redirect to their store page
     window.location.href = countryURL;
   } else {
     alert("🌍 Please select your country first!");
   }
 });
 
-// === UPDATE 'MY COUNTRY' BUTTON DYNAMICALLY ===
+// === UPDATE 'MY COUNTRY' BUTTON ===
 function updateCountryButton() {
   const btn = document.getElementById("change-country");
   const savedCountry = localStorage.getItem("userCountryName");
-  if (savedCountry) {
-    btn.textContent = `🌍 ${savedCountry}`;
-  } else {
-    btn.textContent = "🌍 My Country";
+  btn.textContent = savedCountry ? `🌍 ${savedCountry}` : "🌍 My Country";
+}
+
+// === AUTO-DETECT VISITOR COUNTRY ===
+async function detectCountry() {
+  try {
+    const res = await fetch("https://ipapi.co/json/");
+    const data = await res.json();
+    const detectedCode = data.country_code; // e.g. 'NG', 'US'
+    const select = document.getElementById("country-select");
+
+    // Find matching option by data-code
+    const match = [...select.options].find(opt => opt.dataset.code === detectedCode);
+
+    // If found and not already saved
+    if (match && !localStorage.getItem("userCountryName")) {
+      select.value = match.value; // Preselect in popup
+      localStorage.setItem("userCountryName", match.text);
+      localStorage.setItem("userCountryURL", match.value);
+      localStorage.setItem("userCountryCode", match.dataset.code);
+    } else if (localStorage.getItem("userCountryCode")) {
+      // Preselect saved one when returning
+      const savedCode = localStorage.getItem("userCountryCode");
+      const savedMatch = [...select.options].find(opt => opt.dataset.code === savedCode);
+      if (savedMatch) select.value = savedMatch.value;
+    }
+
+    updateCountryButton();
+  } catch (error) {
+    console.log("🌍 Country detection failed:", error);
+    updateCountryButton();
   }
 }
-updateCountryButton();
 
-// === CHANGE COUNTRY BUTTON (OPEN POPUP) ===
+// === POPUP OPEN EVENT ===
 document.getElementById("change-country").addEventListener("click", () => {
   document.getElementById("country-popup").style.display = "flex";
+
+  // Ensure dropdown always shows detected/saved country
+  const savedCode = localStorage.getItem("userCountryCode");
+  const select = document.getElementById("country-select");
+  if (savedCode) {
+    const savedOption = [...select.options].find(opt => opt.dataset.code === savedCode);
+    if (savedOption) select.value = savedOption.value;
+  }
 });
 
-  </script>
+// Initialize
+detectCountry();
+updateCountryButton();
+</script>
   
-  <script src="script.js"></script>
 </body>
   </html>
