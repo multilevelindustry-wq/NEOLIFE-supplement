@@ -260,7 +260,7 @@ document.getElementById("save-country").addEventListener("click", function() {
     // Redirect to their store page
     window.location.href = countryURL;
   } else {
-    alert("🌍 Please select your country first!");
+    alert(" Please select your country first!");
   }
 });
 
@@ -268,7 +268,7 @@ document.getElementById("save-country").addEventListener("click", function() {
 function updateCountryButton() {
   const btn = document.getElementById("change-country");
   const savedCountry = localStorage.getItem("userCountryName");
-  btn.textContent = savedCountry ? `🌍 ${savedCountry}` : "🌍 My Country";
+  btn.textContent = savedCountry ? ` ${savedCountry}` : " My Country";
 }
 
 // === AUTO-DETECT VISITOR COUNTRY ===
@@ -297,7 +297,7 @@ async function detectCountry() {
 
     updateCountryButton();
   } catch (error) {
-    console.log("🌍 Country detection failed:", error);
+    console.log(" Country detection failed:", error);
     updateCountryButton();
   }
 }
