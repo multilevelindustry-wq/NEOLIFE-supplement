@@ -348,7 +348,15 @@ if (saveCountryBtn) {
 
 
 
-<script>
+
+
+
+
+
+
+
+
+
 // === SAVE COUNTRY SELECTION ===
 document.getElementById("save-country").addEventListener("click", function() {
   const select = document.getElementById("country-select");
@@ -387,5 +395,5 @@ updateCountryButton();
 document.getElementById("change-country").addEventListener("click", () => {
   document.getElementById("country-popup").style.display = "flex";
 });
-</script>
+
     
