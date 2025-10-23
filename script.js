@@ -344,3 +344,48 @@ if (saveCountryBtn) {
   });
     }
       
+
+
+
+
+<script>
+// === SAVE COUNTRY SELECTION ===
+document.getElementById("save-country").addEventListener("click", function() {
+  const select = document.getElementById("country-select");
+  const selectedOption = select.options[select.selectedIndex];
+
+  if (selectedOption.value !== "") {
+    const countryName = selectedOption.text;
+    const countryURL = selectedOption.value;
+    const countryCode = selectedOption.dataset.code;
+
+    // Save selections
+    localStorage.setItem("userCountryName", countryName);
+    localStorage.setItem("userCountryURL", countryURL);
+    localStorage.setItem("userCountryCode", countryCode);
+
+    // Redirect to correct shop page
+    window.location.href = countryURL;
+  } else {
+    alert("🌍 Please select your country first!");
+  }
+});
+
+// === UPDATE 'MY COUNTRY' BUTTON DYNAMICALLY ===
+function updateCountryButton() {
+  const btn = document.getElementById("change-country");
+  const savedCountry = localStorage.getItem("userCountryName");
+  if (savedCountry) {
+    btn.textContent = `🌍 ${savedCountry}`;
+  } else {
+    btn.textContent = "🌍 My Country";
+  }
+}
+updateCountryButton();
+
+// === CHANGE COUNTRY BUTTON (OPEN POPUP) ===
+document.getElementById("change-country").addEventListener("click", () => {
+  document.getElementById("country-popup").style.display = "flex";
+});
+</script>
+    
