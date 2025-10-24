@@ -72,7 +72,7 @@ header nav ul li a.active {
 /* ===== HERO ===== */
 .hero {
   background: url('https://images.unsplash.com/photo-1557973350-f61cc5d1a5ff?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8b3V0ZG9vcnN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=800') center/cover no-repeat;
-  height: 40vh;
+  height: 35vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -105,7 +105,7 @@ header nav ul li a.active {
 
 .hero-3 {
   background: url('https://images.unsplash.com/photo-1628498188904-036f5e25e93e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=927') center/cover no-repeat;
-  height: 50vh;
+  height: 55vh;
   display: flex;
   justify-content: center;
   align-items: center;
