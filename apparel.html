@@ -461,6 +461,25 @@ h6{
     color: white;
 }
 
+  .productes-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  background: black;
+  gap: 15px;
+  justify-items: center;
+  }
+
+  .productes-row .col-1 {
+  background-color: black;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding-left: 30px;
+  }
+  .productes-row .col-1:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  
 
 .product-row {
   display: grid;
