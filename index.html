@@ -3,72 +3,8 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>NEOSTORE —Shop All Product/Categories-women-men-kids-health-clothing-groceries-electronics-footwears-cosmetics</title>
+<title>NEOSTORE — Product / Cart / Auth Demo</title>
 
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LCJ3RNMFDY"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-LCJ3RNMFDY');
-</script>
-  
-  <!-- 🔹 META DESCRIPTION -->
-  <meta name="description" content="Shop premium NeoLife supplements for immune support, detox, and energy. 100% natural vitamins and minerals for men, women, and children. Global shipping & free health tips." />
-
-  <!-- 🔹 CANONICAL URL -->
-  <link rel="canonical" href="https://neolifestore.com/" />
-
-  <!-- 🔹 FAVICON -->
-  <link rel="icon" href="logo.webp" type="image/x-icon" />
-
-  <!-- 🔹 OPEN GRAPH (Facebook, WhatsApp, etc.) -->
-  <meta property="og:title" content="NeoLife Supplements Store | 100% Natural Health & Wellness Products" />
-  <meta property="og:description" content="Boost your health naturally with NeoLife supplements — immune support, detox, and energy. Backed by science, delivered worldwide." />
-  <meta property="og:image" content="https://neolifestore.com/images/og-banner.jpg" />
-  <meta property="og:url" content="https://neolifestore.com/" />
-  <meta property="og:type" content="website" />
-
-  <!-- 🔹 TWITTER CARD -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="NeoLife Supplements Store | Natural Vitamins for Total Wellness" />
-  <meta name="twitter:description" content="Shop NeoLife supplements online — 100% natural vitamins, detox, and energy boosters. Fast worldwide shipping." />
-  <meta name="twitter:image" content="https://neolifestore.com/images/og-banner.jpg" />
-
-  <!-- 🔹 KEYWORDS -->
-  <meta name="keywords" content="NeoLife supplements for Men, buy NeoLife products online today, Neolife natural vitamins supplements shop, detox supplements in Neolife Shop, immune boosters for Women and Men, NeoLife omega-3 supplements in the world, NeoLife Pro Vitality top sellers, NeoLife vitamins for women And Children, NeoLife Shop for energy supplements, NeoLife multivitamins for all health, NeoLife Supplements store online" />
-
-  <!-- 🔹 STRUCTURED DATA (Schema.org for Google Rich Results) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "NeoLife Store",
-    "url": "https://neolifestore.com",
-    "logo": "https://neolifestore.com/images/logo.png",
-    "sameAs": [
-      "https://www.facebook.com/neolifestore",
-      "https://www.instagram.com/neolifestore",
-      "https://twitter.com/neolifestore"
-    ],
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+2348085995394",
-      "contactType": "customer service",
-      "areaServed": "Worldwide",
-      "availableLanguage": ["English"]
-    }
-  }
-  </script>
-
-  <!-- 🔹 PERFORMANCE BOOST -->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="robots" content="index, follow" />
-  <meta name="author" content="NeoLife Store" />
-
-  
 <!-- PayPal JS SDK (LIVE client-id) -->
 <script src="https://www.paypal.com/sdk/js?client-id=Aey_vJzSIErk6JUHmkIU41JQ4W1vA2FlfBNf5Vtkg7j4YLaWHkFtw4WSPI0SWiCzhaNKqPt2oGuVIF1n&components=buttons&currency=USD"></script>
 
@@ -104,8 +40,7 @@
   .modal .panel{width:360px;background:white;padding:18px;border-radius:10px;}
   input[type=text],input[type=password],input[type=email]{width:100%;padding:10px;margin:8px 0;border-radius:8px;border:1px solid #e5e7eb;}
   a.link{color:var(--accent);cursor:pointer;}
-  footer{padding:20px;text-align:center;color:var(--muted);background-color:black;}
-  .copyright{padding:20px;text-align:center;color:var(--muted);background-color: black;}
+  footer{padding:20px;text-align:center;color:var(--muted);}
 
   /* Header enhancements */
   .left-section{display:flex;align-items:center;gap:15px;}
@@ -119,7 +54,7 @@
   @media(max-width:768px){
     .menu-btn{display:block;}
     nav{
-      position:fixed;top:0;left:-100%;width:50%;height:50vh;background:white;
+      position:fixed;top:0;left:-100%;width:50%;height:5vh;background:white;
       flex-direction:column;align-items:center;justify-content:center;transition:0.4s;
     }
     nav.active{left:0;}
@@ -128,14 +63,8 @@
   }
   
   
-  .logo a{
-      text-decoration:none;
-      color: black;
-  }
   
-  .icon a{
-      color: black;
-  }
+  
   
   
   /* --- Header --- */
@@ -164,16 +93,12 @@ header {
     font-weight: bold;
   }
 
-  nav {
-    display: flex;
-    gap: 25px;
-  }
-
   nav a {
     color: #111;
     text-decoration: none;
     font-size: 1rem;
     transition: 0.3s;
+    padding: 10px;
   }
 
   nav a:hover {
@@ -191,7 +116,7 @@ header {
   }
 
   /* Mobile view */
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     .menu-btn {
       display: block;
     }
@@ -201,7 +126,7 @@ header {
       top: 0;
       left: -100%;
       width: 50%;
-      height: 50vh;
+      height: 100%;
       background: white;
       flex-direction: column;
       align-items: center;
@@ -405,7 +330,8 @@ header {
   object-fit: cover;
   border-radius: 15px;
 }
-  .single {
+
+.single {
   flex: 0 0 auto;
   width: 100px; /* Between 250 - 350 */
   overflow: hidden;
@@ -436,7 +362,6 @@ header {
   background: #fff;
   text-align: center;
 }
-
 .singlet img {
   width: 100%;
   height: 180px;
@@ -545,34 +470,14 @@ h6{
   justify-items: center;
 }
 
-.productes-row {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  background: black;
-  gap: 15px;
-  justify-items: center;
-}
-
 .product-row .col-1 {
-  background: white;
+  background: #fff;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   padding-left: 3px;
 }
 
-.productes-row .col-1 {
-  background-color: black;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  padding-left: 30px;
-}
-
 .product-row .col-1:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.productes-row .col-1:hover {
   transform: scale(1.05);
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
@@ -594,20 +499,6 @@ h6{
 /* ✅ Desktop: 6+ columns */
 @media (min-width: 1024px) {
   .product-row {
-    grid-template-columns: repeat(6, 1fr);
-  }
-}
-
-/* ✅ Mobile: 4 columns */
-@media (max-width: 768px) {
-  .productes-row {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-/* ✅ Desktop: 6+ columns */
-@media (min-width: 1024px) {
-  .productes-row {
     grid-template-columns: repeat(6, 1fr);
   }
 }
@@ -734,8 +625,9 @@ h6{
   border-radius: 0 14px 14px 0;
   cursor: pointer;
   font-size: 1rem;
-  }
-  .search-bar button:hover {
+}
+
+.search-bar button:hover {
   background: #e66410;
 }
 
@@ -817,7 +709,6 @@ h6{
   min-width: 140px;
   z-index: 999;
 }
-
 .dropdown a {
   padding: 10px;
   text-decoration: none;
@@ -829,23 +720,22 @@ h6{
   }
   
   
-  
 
 </style>
 </head>
 <body>
-    <a href="#">
+    
     <div class="slider">
   <img src="images.jpg" alt="Neolife Store for All your Needs" class="slide from-left">
-  <img src="1000089465-min.jpg" alt="cheapest online customers for every" class="slide from-top">
-  <img src="" alt="Free Shipping for Orders above $40" class="slide from-right">
-  <img src="https://ng.jumia.is/cms/0-0-black-friday/2025/MOBILE-TOP-STRIP-LIVE-ezgif.com-optimize.gif" alt="best Online shopping for American" class="slide from-bottom">
-</div></a>
+  <img src="1000087987-min.jpg" alt="cheapest online customers for every" class="slide from-top">
+  <img src="1000078515-min.jpg" alt="Free Shipping for Orders above $40" class="slide from-right">
+  <img src="1000078420-min.jpg" alt="best Online shopping for American" class="slide from-bottom">
+</div>
 
 <header>
   <div class="left-section">
     <div class="menu-btn" id="menu-btn">&#9776;</div>
-    <div class="logo"><a href="index.html">NEOSTORE</a></div>
+    <div class="logo">NEOSTORE</div>
   </div>
   
   <!-- 🔍 Search Bar (Desktop) -->
@@ -857,14 +747,19 @@ h6{
   
   <nav id="nav">
     <button class="close-btn hidden" id="close-btn">&times;</button>
-    <a href="#product">Neo Ship</a>
-    <a href="#product">Shop</a>
+    <a href="#home">Trending Outfits</a>
+    <a href="#about">Shop With Neo Plus</a>
+    <a href="#home">Referral program</a>
+    <a href="#product">join Neoship</a>
+    <a href="#product">Blog</a>
+    <a href="#about">Kindle</a>
+    <a href="#about">About</a>
     <a href="#about">Contact</a>
   </nav>
   <div style="display:flex;align-items:center">
     <div id="user-area" class="icon" title="Sign Up / Login"><i class="fa-solid fa-user"></i> <span id="user-text-mini" style="margin-left:8px"></span></div>
     <div style="width:12px"></div>
-    <div id="cart-btn" class="icon" title="Cart"><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a> <span id="cart-count" style="font-weight:600;margin-left:6px;background-color:orange;color:black;border-radius:5px;"></span></div>
+    <div id="cart-btn" class="icon" title="Cart"><i class="fa-solid fa-cart-shopping"></i> <span id="cart-count" style="font-weight:600;margin-left:6px"></span></div>
   </div>
 </header>
 
@@ -889,7 +784,7 @@ h6{
         <div class="card product">
           <img id="product-image" src="1000086128-min.png.jpg" alt="product image">
           <h1 id="product-title">Vitamin</h1>
-          <div class="price" id="product-price">$24.99</div>
+          <div class="price" id="product-price">$15.19</div>
           <p class="product-desc">High quality product. Use the Add to cart button to store this item in your cart. Cart persists across pages and sessions.</p>
           <div style="margin-top:12px;display:flex;gap:10px">
             <button id="add-to-cart" class="btn">Add to cart</button>
@@ -925,11 +820,6 @@ h6{
   </section>
   <!-- Cart Page -->
   <section id="page-cart" class="page hidden">
-         <style>
-          #page-cart{
-              display: none;
-          }
-      </style>
     <div class="card">
       <h2>Your Cart</h2>
       <div id="cart-full-list" class="cart-list"></div>
@@ -958,7 +848,7 @@ h6{
           <button type="submit" class="btn">Submit</button>
           <button type="button" id="auth-toggle" class="btn ghost">Switch to Login</button>
         </div>
-        <div style="margin-top:8px;color:var(--muted)"></div>
+        <div style="margin-top:8px;color:var(--muted)">Demo: passwords stored client-side (localStorage).</div>
       </form>
     </div>
   </section>
@@ -980,175 +870,164 @@ h6{
 </div>
 <div class="promo-section">
     <div class="promo-cards" id="promoCards">
-      <div class="singles"><a href="apparel.html"><img src="https://ng.jumia.is/cms/0-0-black-friday/2025/MOBILE-TOP-STRIP-LIVE-ezgif.com-optimize.gif" alt=""></a></div>
+      <div class="singles"><a href="apparel.html"><img src="1000087987-min.jpg" alt=""></a></div>
       <div class="singles"><a href="Electronics.html"><img src="images.jpg" alt=""></a></div>
-      
-      <div class="singles"><a href="Automobile.html"><img src="1000088913-min.png.jpg" alt=""></a></div>
-      
-      <div class="singles"><a href="#"><img src="1000088912-min.png.jpg" alt=""></a></div>
-      
-      <div class="singles"><a href="#"><img src="1000088911-min.png.jpg" alt=""></a></div>
-      <div class="singles"><a href="#"><img src="1000088911-min.png.jpg" alt=""></a></div>
-      <div class="singles"><a href="#"><img src="1000078564-min.jpg" alt=""></a></div>
-       <div class="singles"><a href="#"><img src="1000078564-min.jpg" alt=""></a></div>
-       <div class="singles"><a href="#"><img src="1000078564-min.jpg" alt=""></a></div>
-       <div class="singles"><a href="#"><img src="1000078564-min.jpg" alt=""></a></div>
-       <div class="singles"><a href="#"><img src="1000078564-min.jpg" alt=""></a></div>
-       <div class="singles"><a href="#"><img src="1000078564-min.jpg" alt=""></a></div>
-       <div class="singles"><a href="#"><img src="1000078564-min.jpg" alt=""></a></div>
-       <div class="singles"><a href="#"><img src="1000078564-min.jpg" alt=""></a></div>
+      <div class="singles"><a href="Automobile.html"><img src="1000078420-min.jpg" alt=""></a></div>
+      <div class="singles"><a href=""><img src="1000078564-min.jpg" alt=""></a></div>
+      <div class="singles"><a href=""><img src="1000078420-min.jpg" alt=""></a></div>
+      <div class="singles"><a href=""><img src="1000078564-min.jpg" alt=""></a></div>
+      <div class="singles"><a href=""><img src="1000078564-min.jpg" alt=""></a></div>
+       <div class="singles"><a href=""><img src="1000078564-min.jpg" alt=""></a></div>
+       <div class="singles"><a href=""><img src="1000078564-min.jpg" alt=""></a></div>
+       <div class="singles"><a href=""><img src="1000078564-min.jpg" alt=""></a></div>
+       <div class="singles"><a href=""><img src="1000078564-min.jpg" alt=""></a></div>
+       <div class="singles"><a href=""><img src="1000078564-min.jpg" alt=""></a></div>
+       <div class="singles"><a href=""><img src="1000078564-min.jpg" alt=""></a></div>
+       <div class="singles"><a href=""><img src="1000078564-min.jpg" alt=""></a></div>
       </div>
      </div>
 
-    <!-- Progress Line -->
-    <div class="slide-progress">
-      <div class="progress-bar" id="progressBar"></div>
-    </div>
-  </div>
   
   <div class="promo-section">
     <div class="promo-cards" id="promoCards">
-     <div class="single"><a href="#">
+     <div class="single">
        <div class="slider">
-  <img src="1000088751-min.png.jpg" alt="" class="slide from-left">
-  <img src="1000088752-min.png.jpg" alt="" class="slide from-top">
-  <img src="1000088756-min.png.jpg" alt="Free Shipping for Orders above $40" class="slide from-right">
-  <img src="1000088759-min.png.jpg" alt="best Online shopping for American" class="slide from-bottom"></div>
-  </div></a>
-  <div class="single"><a href="#">
+  <img src="1000087987-min.jpg" alt="" class="slide from-left">
+  <img src="IMG-20251024-WA0004.jpg" alt="" class="slide from-top">
+  <img src="1000078515-min.jpg" alt="Free Shipping for Orders above $40" class="slide from-right">
+  <img src="1000078420-min.jpg" alt="best Online shopping for American" class="slide from-bottom"></div>
+  </div>
+  <div class="single">
        <div class="slider">
-  <img src="1000088758-min.png.jpg" alt="" class="slide from-left">
-  <img src="1000088145-min.png.jpg" alt="" class="slide from-top">
-  <img src="1000088135-min.png.jpg" alt="Free Shipping for Orders above $40" class="slide from-right">
-  <img src="1000088137-min.png.jpg" alt="best Online shopping for American" class="slide from-bottom"></div>
-  </div></a>
+  <img src="1000078564-min.jpg" alt="" class="slide from-left">
+  <img src="IMG-20251024-WA0004.jpg" alt="" class="slide from-top">
+  <img src="1000078515-min.jpg" alt="Free Shipping for Orders above $40" class="slide from-right">
+  <img src="1000078420-min.jpg" alt="best Online shopping for American" class="slide from-bottom"></div>
+  </div>
   
-  <div class="single"><a href="#">
+  <div class="single">
        <div class="slider">
-  <img src="1000088764-min.png.jpg" alt="" class="slide from-left">
-  <img src="1000088146-min.png.jpg" alt="" class="slide from-top">
-  <img src="1000088761-min.png.jpg" alt="Free Shipping for Orders above $40" class="slide from-right">
-  <img src="1000088148-min.png.jpg" alt="best Online shopping for American" class="slide from-bottom"></div>
-  </div></a>
+  <img src="1000078564-min.jpg" alt="" class="slide from-left">
+  <img src="IMG-20251024-WA0004.jpg" alt="" class="slide from-top">
+  <img src="1000078515-min.jpg" alt="Free Shipping for Orders above $40" class="slide from-right">
+  <img src="1000078420-min.jpg" alt="best Online shopping for American" class="slide from-bottom"></div>
+  </div>
   
-   <div class="single"><a href="#">
+   <div class="single">
     <div class="slider">
   <img src="1000078564-min.jpg" alt="" class="slide from-left">
   <img src="IMG-20251024-WA0004.jpg" alt="" class="slide from-top">
   <img src="1000078515-min.jpg" alt="Free Shipping for Orders above $40" class="slide from-right">
   <img src="1000078420-min.jpg" alt="best Online shopping for American" class="slide from-bottom"></div>
-    </div></a>
+    </div>
   
-  <div class="single"><a href="#">
+  <div class="single">
     <div class="slider">
   <img src="1000078564-min.jpg" alt="" class="slide from-left">
   <img src="IMG-20251024-WA0004.jpg" alt="" class="slide from-top">
   <img src="1000078515-min.jpg" alt="Free Shipping for Orders above $40" class="slide from-right">
   <img src="1000078420-min.jpg" alt="best Online shopping for American" class="slide from-bottom"></div>
-    </div></a>
+    </div>
+      <div class="single">
+    <div class="slider">
+  <img src="1000078564-min.jpg" alt="" class="slide from-left">
+  <img src="IMG-20251024-WA0004.jpg" alt="" class="slide from-top">
+  <img src="1000078515-min.jpg" alt="Free Shipping for Orders above $40" class="slide from-right">
+  <img src="1000078420-min.jpg" alt="best Online shopping for American" class="slide from-bottom"></div>
+    </div>
     
-    <div class="single"><a href="#">
+    <div class="single">
     <div class="slider">
   <img src="1000078564-min.jpg" alt="" class="slide from-left">
   <img src="IMG-20251024-WA0004.jpg" alt="" class="slide from-top">
   <img src="1000078515-min.jpg" alt="Free Shipping for Orders above $40" class="slide from-right">
   <img src="1000078420-min.jpg" alt="best Online shopping for American" class="slide from-bottom"></div>
-    </div></a>
+     </div>
+      
+      <div class="single">
+    <div class="slider">
+  <img src="1000078564-min.jpg" alt="" class="slide from-left">
+  <img src="IMG-20251024-WA0004.jpg" alt="" class="slide from-top">
+  <img src="1000078515-min.jpg" alt="Free Shipping for Orders above $40" class="slide from-right">
+  <img src="1000078420-min.jpg" alt="best Online shopping for American" class="slide from-bottom"></div>
+    </div>
+       <div class="single">
+    <div class="slider">
+  <img src="1000078564-min.jpg" alt="" class="slide from-left">
+  <img src="IMG-20251024-WA0004.jpg" alt="" class="slide from-top">
+  <img src="1000078515-min.jpg" alt="Free Shipping for Orders above $40" class="slide from-right">
+  <img src="1000078420-min.jpg" alt="best Online shopping for American" class="slide from-bottom"></div>
+    </div>
     
-    <div class="single"><a href="#">
+       <div class="single">
     <div class="slider">
   <img src="1000078564-min.jpg" alt="" class="slide from-left">
   <img src="IMG-20251024-WA0004.jpg" alt="" class="slide from-top">
   <img src="1000078515-min.jpg" alt="Free Shipping for Orders above $40" class="slide from-right">
   <img src="1000078420-min.jpg" alt="best Online shopping for American" class="slide from-bottom"></div>
-     </div></a>
-    <div class="single"><a href="#">
-    <div class="slider">
-  <img src="1000078564-min.jpg" alt="" class="slide from-left">
-  <img src="IMG-20251024-WA0004.jpg" alt="" class="slide from-top">
-  <img src="1000078515-min.jpg" alt="Free Shipping for Orders above $40" class="slide from-right">
-  <img src="1000078420-min.jpg" alt="best Online shopping for American" class="slide from-bottom"></div>
-    </div></a>
-       <div class="single"><a href="#">
-    <div class="slider">
-  <img src="1000078564-min.jpg" alt="" class="slide from-left">
-  <img src="IMG-20251024-WA0004.jpg" alt="" class="slide from-top">
-  <img src="1000078515-min.jpg" alt="Free Shipping for Orders above $40" class="slide from-right">
-  <img src="1000078420-min.jpg" alt="best Online shopping for American" class="slide from-bottom"></div>
-    </div></a>
+    </div>
     
-       <div class="single"><a href="#">
+       <div class="single">
     <div class="slider">
   <img src="1000078564-min.jpg" alt="" class="slide from-left">
   <img src="IMG-20251024-WA0004.jpg" alt="" class="slide from-top">
   <img src="1000078515-min.jpg" alt="Free Shipping for Orders above $40" class="slide from-right">
   <img src="1000078420-min.jpg" alt="best Online shopping for American" class="slide from-bottom"></div>
-    </div></a>
+    </div>
     
-       <div class="single"><a href="#">
+       <div class="single">
     <div class="slider">
   <img src="1000078564-min.jpg" alt="" class="slide from-left">
   <img src="IMG-20251024-WA0004.jpg" alt="" class="slide from-top">
   <img src="1000078515-min.jpg" alt="Free Shipping for Orders above $40" class="slide from-right">
   <img src="1000078420-min.jpg" alt="best Online shopping for American" class="slide from-bottom"></div>
-    </div></a>
+    </div>
     
-       <div class="single"><a href="#">
+       <div class="single">
     <div class="slider">
   <img src="1000078564-min.jpg" alt="" class="slide from-left">
   <img src="IMG-20251024-WA0004.jpg" alt="" class="slide from-top">
   <img src="1000078515-min.jpg" alt="Free Shipping for Orders above $40" class="slide from-right">
   <img src="1000078420-min.jpg" alt="best Online shopping for American" class="slide from-bottom"></div>
-    </div></a>
+    </div>
     
-       <div class="single"><a href="#">
+       <div class="single">
     <div class="slider">
   <img src="1000078564-min.jpg" alt="" class="slide from-left">
   <img src="IMG-20251024-WA0004.jpg" alt="" class="slide from-top">
   <img src="1000078515-min.jpg" alt="Free Shipping for Orders above $40" class="slide from-right">
   <img src="1000078420-min.jpg" alt="best Online shopping for American" class="slide from-bottom"></div>
-    </div></a>
-    
-       <div class="single"><a href="#">
-    <div class="slider">
-  <img src="1000078564-min.jpg" alt="" class="slide from-left">
-  <img src="IMG-20251024-WA0004.jpg" alt="" class="slide from-top">
-  <img src="1000078515-min.jpg" alt="Free Shipping for Orders above $40" class="slide from-right">
-  <img src="1000078420-min.jpg" alt="best Online shopping for American" class="slide from-bottom"></div>
-    </div></a>
+    </div>
     
   </div>
  </div>
  </div>
- 
-      <div class="section">
+  <div class="section">
     <div class="promo" id="promoCards">
-     <div class="single"><a href="#"><img src="1000088762-min.png.jpg" alt=""></a></div>
-      <div class="single"><a href="#"><img src="1000088139-min.png.jpg" alt=""></a></div>
-      <div class="single"><a href="#"><img
-src="1000088759-min.png.jpg" alt=""></a></div>
-      <div class="single"><a href="#"><img src="1000088760-min.png.jpg" alt=""></a></div>
-      <div class="single"><a href="#"><img src="1000088143-min.png.jpg" alt=""></a></div>
-      <div class="single"><a href="#"><img src="1000088752-min.png.jpg" alt=""></a></div>
-      <div class="single"><a href="#"><img src="1000088142-min.png.jpg" alt=""></a></div>
-       <div class="single"><a href="#"><img src="1000088751-min.png.jpg" alt=""></a></div>
-      <div class="single"><a href="#"><img src="1000088141-min.png.jpg" alt=""></a></div>
-      <div class="single"><a href="#"><img src="1000088135-min.png.jpg" alt=""></a></div>
-      <div class="single"><a href="#"><img src="1000088136-min.png.jpg" alt=""></a></div>
-      <div class="single"><a href="#"><img src="1000088134-min.png.jpg" alt=""></a></div>
-      <div class="single"><a href="#"><img src="1000088760-min.png.jpg" alt=""></a></div>
-       <div class="single"><a href="#"><img src="1000088757-min.png.jpg" alt=""></a></div>
-      <div class="single"><a href="#"><img src="1000088752-min.png.jpg" alt=""></a></div>
-      <div class="single"><a href="#"><img src="1000088751-min.png.jpg" alt=""></a></div>
-      <div class="single"><a href="#"><img src="1000088878-min.png.jpg" alt=""></a></div>
-      <div class="single"><a href="#"><img src="1000088875-min.png.jpg" alt=""></a></div>
-      <div class="single"><a href="#"><img src="1000088892-min.png.jpg" alt=""></a></div>
-      <div class="single"><img src="1000088889-min.png.jpg" alt=""></a></div>
-       <div class="single"><a href="#"><img src="" alt=""></a></div>
-      <div class="single"><a href="#"><img src="1000088888-min.png.jpg" alt=""></a></div>
+     <div class="single"><img src="1000088137-min.png.jpg" alt=""></div>
+      <div class="single"><img src="1000088139-min.png.jpg" alt=""></div>
+       <div class="single"><img src="1000088140-min.png.jpg" alt=""></div>
+      <div class="single"><img src="1000088141-min.png.jpg" alt=""></div>
+      <div class="single"><img src="1000088142-min.png.jpg" alt=""></div>
+      <div class="single"><img src="1000088143-min.png.jpg" alt=""></div>
+      <div class="single"><img src="1000088144-min.png.jpg" alt=""></div>
+       <div class="single"><img src="1000088118-min.png.jpg" alt=""></div>
+      <div class="single"><img src="1000088145-min.png.jpg" alt=""></div>
+      <div class="single"><img src="1000088146-min.png.jpg" alt=""></div>
+      <div class="single"><img src="1000088147-min.png.jpg" alt=""></div>
+      <div class="single"><img src="1000088148-min.png.jpg" alt=""></div>
+      <div class="single"><img src="1000088149-min.png.jpg" alt=""></div>
+       <div class="single"><img src="1000088151-min.png.jpg" alt=""></div>
+      <div class="single"><img src="1000088152-min.png.jpg" alt=""></div>
+      <div class="single"><img src="1000088153-min.png.jpg" alt=""></div>
+      <div class="single"><img src="1000078564-min.jpg" alt=""></div>
+      <div class="single"><img src="1000078420-min.jpg" alt=""></div>
+      <div class="single"><img src="1000078564-min.jpg" alt=""></div>
+      <div class="single"><img src="1000078564-min.jpg" alt=""></div>
+       <div class="single"><img src="1000078564-min.jpg" alt=""></div>
+      <div class="single"><img src="1000078564-min.jpg" alt=""></div>
     </div>
        </div>
-       
          <div class="flash-sale">
       <div class="flash">
           <h6>Flash Sales</h6>
@@ -1161,49 +1040,50 @@ src="1000088759-min.png.jpg" alt=""></a></div>
   
   <div class="promo-section">
     <div class="promo-cards" id="promoCards">
-     <div class="singlet"><a href="men1.html"><img src="1000088877-min.png.jpg" alt="Top trending Men's fashion in US, African , Europe in the world| Cheap Online Men's Clothing Boutique in the World"></a>
-     <h1>Men's Fashion Pers....</h1><p>$14.8⁷</p><p>5k+ Sold</p> <span>-67</span></div>
-      <div class="singlet"><a href="#"><img src="1000088750-min.png.jpg" alt=""></a></a><h1>Wireless Earbuds...</h1><p>$15.0⁹</p><p>2k+ Sold</p> <span>-43</span></div>
+     <div class="singlet"> <a href="product1.html"><img src="1000088114-min.png.jpg" alt=""></a>
+     <h1>women's summer...</h1><p>$15.1⁹</p><p>14 remaining</p> <span>-34</span></div>
+     
+      <div class="singlet"><a href="product2.html"><img src="1000088109-min.png.jpg" alt=""></a><h1>women's solid folds...</h1><p>$19.8⁹</p><p>19 remaining</p> <span>-21</span></div>
       
-      <div class="singlet"><a href="#"><img
- src="1000088765-min.png.jpg" alt=""></a></a><h1>Phone Shop</h1><p>$75.9⁸</p><p>200+ Sold</p> <span>-38</span></div>
+      <div class="singlet"><a href="product3.html"><img
+ src="1000088110-min.png.jpg" alt=""></a><h1>items name</h1><p>$27.8⁷</p><p>50 remaining</p> <span>-14</span></div>
  
-      <div class="singlet"><a href="#"><img src="1000088766-min.png.jpg" alt=""></a></a><h1>Six Selling Points</h1><p>$87.7⁷</p><p>100+ Sold</p> <span>-21</span></div>
+      <div class="singlet"><a href="product4.html"><img src="1000088108-min.png.jpg" alt=""><h1>items name</h1><p>$27.8⁷</p><p>50 remaining</p> <span>-14</span></div></a>
       
-      <div class="singlet"><a href="#"><img src="1000088880-min.png.jpg" alt=""></a></a><h1>Men's Summer Wear...</h1><p>$15.0⁷</p><p>500+ Sold</p> <span>-58</span></div>
+      <div class="singlet"><a href="product5.html"><img src="1000088115-min.png.jpg" alt=""><h1>items name</h1><p>$27.8⁷</p><p>50 remaining</p> <span>-14</span></div></a>
       
-      <div class="singlet"><a href="#"><img src="1000088885-min.png.jpg" alt=""></a></a><h1>Top Men's Series...</h1><p>$14.7⁷</p><p>700+ Sold</p> <span>-37</span></div>
+      <div class="singlet"><a href="product6.html"><img src="1000088116-min.png.jpg" alt=""><h1>items name</h1><p>$27.8⁷</p><p>50 remaining</p> <span>-14</span></div></a>
       
-      <div class="singlet"><a href="#"><img src="1000078564-min.jpg" alt=""></a><h1>items name</h1><p>$27.8⁷</p><p>50 remaining</p> <span>-14</span></div>
+      <div class="singlet"><a href="product7.html"><img src="1000088117-min.png.jpg" alt=""><h1>items name</h1><p>$27.8⁷</p><p>50 remaining</p> <span>-14</span></div></a>
       
-       <div class="singlet"><a href="#"><img src="1000078564-min.jpg" alt=""></a><h1>items name</h1><p>$27.8⁷</p><p>50 remaining</p> <span>-14</span></div>
+       <div class="singlet"><a href="product8.html"><img src="1000088118-min.png.jpg" alt=""><h1>items name</h1><p>$27.8⁷</p><p>50 remaining</p> <span>-14</span></div></a>
        
-      <div class="singlet"><a href="#"><img src="1000078564-min.jpg" alt=""></a><h1>items name</h1><p>$27.8⁷</p><p>50 remaining</p> <span>-14</span></div>
+      <div class="singlet"><a href="product9.html"><img src="1000088119-min.png.jpg" alt=""><h1>items name</h1><p>$27.8⁷</p><p>50 remaining</p> <span>-14</span></div></a>
       
-      <div class="singlet"><a href="#"><img src="1000078564-min.jpg" alt=""></a><h1>items name</h1><p>$27.8⁷</p><p>50 remaining</p> <span>-14</span></div>
+      <div class="singlet"><a href="product10.html"><img src="1000088120-min.png.jpg" alt=""><h1>items name</h1><p>$27.8⁷</p><p>50 remaining</p> <span>-14</span></div></a>
       
-      <div class="singlet"><a href="#"><img src="1000078420-min.jpg" alt=""></a><h1>items name</h1><p>$27.8⁷</p><p>50 remaining</p> <span>-14</span></div>
+      <div class="singlet"><a href="product11.html"><img src="1000088121-min.png.jpg" alt=""><h1>items name</h1><p>$27.8⁷</p><p>50 remaining</p> <span>-14</span></div></a>
       
-      <div class="singlet"><a href="#"><img src="1000078564-min.jpg" alt=""></a><h1>items name</h1><p>$27.8⁷</p><p>50 remaining</p> <span>-14</span></div>
+      <div class="singlet"><a href="product12.html"><img src="1000088122-min.png.jpg" alt=""><h1>items name</h1><p>$27.8⁷</p><p>50 remaining</p> <span>-14</span></div></a>
       
-      <div class="singlet"><a href="#"><img src="1000078564-min.jpg" alt=""></a><h1>items name</h1><p>$27.8⁷</p><p>50 remaining</p> <span>-14</span></div>
+      <div class="singlet"><a href="product13.html"><img src="1000088123-min.png.jpg" alt=""><h1>items name</h1><p>$27.8⁷</p><p>50 remaining</p> <span>-14</span></div></a>
       
-       <div class="singlet"><a href="#"><img src="1000078564-min.jpg" alt=""></a><h1>items name</h1><p>$27.8⁷</p><p>50 remaining</p> <span>-14</span></div>
+       <div class="singlet"><a href="product14.html"><img src="1000088124-min.png.jpg" alt=""><h1>items name</h1><p>$27.8⁷</p><p>50 remaining</p> <span>-14</span></div></a>
        
-      <div class="singlet"><a href="#"><img src="1000078564-min.jpg" alt=""></a><h1>items name</h1><p>$27.8⁷</p><p>50 remaining</p> <span>-14</span></div>
+      <div class="singlet"><a href="product15.html"><img src="1000088126-min.png.jpg" alt=""><h1>items name</h1><p>$27.8⁷</p><p>50 remaining</p> <span>-14</span></div></a>
       </div>
     </div>
 
 
   <div class="product-row">
-  <div class="col-1"><a href="#"><img src="1000088766-min.png.jpg" alt=""></a><h1>Selling Points...</h1></div>
-  <div class="col-1"><a href="#"><img src="1000088759-min.png.jpg" alt=""></a><h1>Official-Orange...</h1></div>
-  <div class="col-1"><a href="#"><img src="1000088146-min.png.jpg" alt=""></a><h1>Trendy female...</h1></div>
-  <div class="col-1"><a href="#"><img src="1000088761-min.png.jpg" alt=""></a><h1>Smart Phone</h1></div>
-  <div class="col-1"><a href="#"><img src="1000088756-min.png.jpg" alt=""></a><h1>F9 Wireless...</h1></div>
-  <div class="col-1"><a href="#"><img src="1000088764-min.png.jpg" alt=""></a><h1>Global Unlock...</h1></div>
-  <div class="col-1"><img src="1000088758-min.png.jpg" alt=""></a><h1>Top pouch</h1></div>
-  <div class="col-1"><a href="#"><img src="1000088148-min.png.jpg" alt=""></a><h1>Female Top</h1></div>
+  <div class="col-1"><img src="1000088128-min.png.jpg" alt=""><h1>items name</h1></div>
+  <div class="col-1"><img src="1000088129-min.png.jpg" alt=""><h1>items name</h1></div>
+  <div class="col-1"><img src="1000088130-min.png.jpg" alt=""><h1>items name</h1></div>
+  <div class="col-1"><img src="1000088132-min.png.jpg" alt=""><h1>items name</h1></div>
+  <div class="col-1"><img src="1000088133-min.png.jpg" alt=""><h1>items name</h1></div>
+  <div class="col-1"><img src="1000088134-min.png.jpg" alt=""><h1>items name</h1></div>
+  <div class="col-1"><img src="1000088135-min.png.jpg" alt=""><h1>items name</h1></div>
+  <div class="col-1"><img src="1000088136-min.png.jpg" alt=""><h1>items name</h1></div>
 </div>
 <div>
        <div class="flash-saller">
@@ -1216,42 +1096,36 @@ src="1000088759-min.png.jpg" alt=""></a></div>
   
   <div class="promo-section">
     <div class="promo-cards" id="promoCards">
-     <div class="singlet"><a href="#"><img src="1000088898-min.png.jpg" alt=""></a>
-     <h1>New Winter</h1><p>$14.7⁹</p><p>1.1k Sold</p> <span>-39</span></div>
-     
-      <div class="singlet"><a href="men2.html"><img src="1000088875-min.png.jpg" alt="Men's Casual wears top fashion trending outfits | Online Store for Men's Accessories shoes and more"></a>
-      <h1>Casual breath...</h1><p>$13.6⁹</p><p>2k+ Sold</p> <span>-72</span></div>
-      
-      <div class="singlet"> <a href="men3.html"><img
- src="1000088876-min.png.jpg" alt=" Best Men's Store For Cheap Affordable Amazon type of products | No One Amazon Shopping Deal in the world with free delivery in us"></a>
- <h1>Men's Summer New...</h1><p>$14.1³</p> <p>1.5k+ Sold</p> <span>-54</span></div>
- 
-      <div class="singlet"><a href="men1.html"><img src="1000088877-min.png.jpg" alt="Shop All Men's categories fast Jumia and Amazon Deals | Men's clothing store for fast delivery Online"></a><h1>Men's fashion Pers...</h1><p>$14.8⁷</p><p>5k+ Sold</p> <span>-67</span></div>
-      
-      <div class="singlet"><a href="#"><img src="1000078420-min.png.jpg" alt=""></a><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
-      <div class="singlet"><a href="#"><img src="" alt=""></a><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
-      <div class="singlet"><a href="#"><img src="" alt=""></a><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
-       <div class="singlet"><a href="#"><img src="" alt=""></a><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
-      <div class="singlet"><a href="#"><img src="" alt=""></a><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
-      <div class="singlet"><a href="#"><img src="" alt=""></a><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
-      <div class="singlet"><a href="#"><img src="" alt=""></a><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
-      <div class="singlet"><a href="#"><img src="" alt=""></a><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
-      <div class="singlet"><a href="#"><img src="" alt=""></a><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
-       <div class="singlet"><a href="#"><img src="" alt=""></a><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
-      <div class="singlet"><a href="#"><img src="" alt=""></a><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
+     <div class="singlet"><img src="1000078564-min.jpg" alt="">
+     <h1>items name</h1><p>$24.8⁷</p> <span>-14</span></div>
+      <div class="singlet"><img src="1000078420-min.jpg" alt=""><h1>items name</h1><p>$24.8⁷</p> <span>-14</span></div>
+      <div class="singlet"><img
+ src="1000078420-min.jpg" alt=""><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
+      <div class="singlet"><img src="1000078564-min.jpg" alt=""><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
+      <div class="singlet"><img src="1000078420-min.jpg" alt=""><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
+      <div class="singlet"><img src="1000078564-min.jpg" alt=""><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
+      <div class="singlet"><img src="1000078564-min.jpg" alt=""><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
+       <div class="singlet"><img src="1000078564-min.jpg" alt=""><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
+      <div class="singlet"><img src="1000078564-min.jpg" alt=""><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
+      <div class="singlet"><img src="1000078564-min.jpg" alt=""><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
+      <div class="singlet"><img src="1000078420-min.jpg" alt=""><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
+      <div class="singlet"><img src="1000078564-min.jpg" alt=""><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
+      <div class="singlet"><img src="1000078564-min.jpg" alt=""><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
+       <div class="singlet"><img src="1000078564-min.jpg" alt=""><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
+      <div class="singlet"><img src="1000078564-min.jpg" alt=""><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
       </div>
     </div>
 
 
   <div class="product-row">
-  <div class="col-1"><a href="#"><img src="1000088902-min.png.jpg" alt=""></a><h1>Top Brands...</h1></div>
-  <div class="col-1"><a href="#"><img src="1000088912-min.png.jpg" alt=""></a><h1>office Footwears...</h1></div>
-  <div class="col-1"><a href="#"><img src="1000088895-min.png.jpg" alt=""></a><h1>Summer wears</h1></div>
-  <div class="col-1"><a href="#"><img src="1000088877-min.png.jpg" alt=""></a><h1>Fashion for...</h1></div>
-  <div class="col-1"><a href="#"><img src="1000088901-min.png.jpg" alt=""></a><h1>Fashionable...</h1></div>
-  <div class="col-1"><a href="#"><img src="1000088897-min.png.jpg" alt=""></a><h1>Summer New...</h1></div>
-  <div class="col-1"><a href="#"><img src="1000088876-min.png.jpg" alt=""></a><h1>New Summer...</h1></div>
-  <div class="col-1"><a href="#"><img src="1000088880-min.png.jpg" alt=""></a><h1>Men Summer...</h1></div>
+  <div class="col-1"><img src="1000078420-min.jpg" alt=""><h1>items name</h1></div>
+  <div class="col-1"><img src="IMG-20251024-WA0004.jpg" alt=""><h1>items name</h1></div>
+  <div class="col-1"><img src="1000078420-min.jpg" alt=""><h1>items name</h1></div>
+  <div class="col-1"><img src="IMG-20251024-WA0004.jpg" alt=""><h1>items name</h1></div>
+  <div class="col-1"><img src="1000078420-min.jpg" alt=""><h1>items name</h1></div>
+  <div class="col-1"><img src="IMG-20251024-WA0004.jpg" alt=""><h1>items name</h1></div>
+  <div class="col-1"><img src="1000078420-min.jpg" alt=""><h1>items name</h1></div>
+  <div class="col-1"><img src="IMG-20251024-WA0004.jpg" alt=""><h1>items name</h1></div>
 </div>
 
 <div class="flash-sellers">
@@ -1263,30 +1137,23 @@ src="1000088759-min.png.jpg" alt=""></a></div>
   </div>
   <div class="promo-section">
     <div class="promo-cards" id="promoCards">
-     <div class="singlet"><a href="#"><img src="1000088916-min.png.jpg" alt=""></a>
-     <h1>Trending Blacks...</h1><p>$24.7⁹</p><p>400+ Sold</p><span>-26</span></div>
-     
-      <div class="singlet"><a href="#"><img src="1000088915-min.png.jpg" alt=""></a><h1>Office Blacks...</h1><p>$23.8⁵</p> <p>600+ Sold</p> <span>-24</span></div>
-      
-      <div class="singlet"><a href="#"><img
- src="1000088907-min.png.jpg" alt=""></a> <h1>Chinese Green...</h1><p>$14.4⁷</p> <p>250+ Sold</p><span>-41</span></div>
- 
-      <div class="singlet"><a href="#"><img src="1000088909-min.png.jpg" alt=""></a><h1>Branded Black Watch...</h1><p>$17.0⁸</p><p>1k+ Sold</p> <span>-48</span></div>
-      
-      
-      <div class="singlet"><a href="#"><img src="1000088132-min.png.jpg" alt=""></a><h1>Casual wears</h1><p>$13.8⁷</p><p>800+ Sold</p> <span>-56</span></div>
-      
-      
-      <div class="singlet"><a href="#"><img src="1000078564-min.jpg" alt=""></a><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
-      <div class="singlet"><a href="#"><img src="1000078564-min.jpg" alt=""></a><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
-       <div class="singlet"><a href="#"><img src="1000078564-min.jpg" alt=""></a><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
-      <div class="singlet"><a href="#"><img src="1000078564-min.jpg" alt=""></a><h1>items name</h1><p>$27.8⁷</p> <Span>-14</span></div>
-      <div class="singlet"><a href="#"><img src="1000078564-min.jpg" alt=""></a><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
-      <div class="singlet"><a href="#"><img src="1000078420-min.jpg" alt=""></a><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
-      <div class="singlet"><a href="#"><img src="1000078564-min.jpg" alt=""></a><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
-      <div class="singlet"><a href="#"><img src="1000078564-min.jpg" alt=""></a><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
-       <div class="singlet"><a href="#"><img src="1000078564-min.jpg" alt=""></a><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
-      <div class="singlet"><a href="#"><img src="1000078564-min.jpg" alt=""></a><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
+     <div class="singlet"><img src="1000078564-min.jpg" alt="">
+     <h1>items name</h1><p>$24.8⁷</p> <span>-14</span></div>
+      <div class="singlet"><img src="1000078420-min.jpg" alt=""><h1>items name</h1><p>$24.8⁷</p> <span>-14</span></div>
+      <div class="singlet"><img
+ src="1000078420-min.jpg" alt=""><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
+      <div class="singlet"><img src="1000078564-min.jpg" alt=""><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
+      <div class="singlet"><img src="1000078420-min.jpg" alt=""><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
+      <div class="singlet"><img src="1000078564-min.jpg" alt=""><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
+      <div class="singlet"><img src="1000078564-min.jpg" alt=""><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
+       <div class="singlet"><img src="1000078564-min.jpg" alt=""><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
+      <div class="singlet"><img src="1000078564-min.jpg" alt=""><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
+      <div class="singlet"><img src="1000078564-min.jpg" alt=""><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
+      <div class="singlet"><img src="1000078420-min.jpg" alt=""><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
+      <div class="singlet"><img src="1000078564-min.jpg" alt=""><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
+      <div class="singlet"><img src="1000078564-min.jpg" alt=""><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
+       <div class="singlet"><img src="1000078564-min.jpg" alt=""><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
+      <div class="singlet"><img src="1000078564-min.jpg" alt=""><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
       </div>
     </div>
     
@@ -1299,23 +1166,23 @@ src="1000088759-min.png.jpg" alt=""></a></div>
       </div>
   </div>
     <div class="products-row">
-  <div class="col-1"><a href="#"><img src="1000088894-min.png.jpg" alt=""></a><h1>Perfume Store...</h1></div>
-  <div class="col-1"><a href="#"><img src="1000088896-min.png.jpg" alt=""></a><h1>For Ladies...</h1></div>
-  <div class="col-1"><a href="#"><img src="1000088887-min.png.jpg" alt=""></a><h1>Asad Perfu...</h1></div>
-  <div class="col-1"><a href="#"><img src="1000088883-min.png.jpg" alt=""></a><h1>Men's Urban...</h1></div>
-  <div class="col-1"><a href="#"><img src="1000088884-min.png.jpg" alt=""></a><h1>Men's Casual...</h1></div>
-  <div class="col-1"><a href="#"><img src="1000088907-min.png.jpg" alt=""></a><h1>Wristwatch...</h1></div>
-  <div class="col-1"><a href="#"><img src="1000088908-min.png.jpg" alt=""></a><h1>Black Watch...</h1></div>
-  <div class="col-1"><a href="#"><img src="1000088899-min.png.jpg" alt=""></a><h1>White and Blacks...</h1></div>
-  <div class="col-1"><a href="#"><img src="1000088916-min.png.jpg" alt=""></a><h1>Black Outfit....</h1></div>
-  <div class="col-1"><a href="#"><img src="1000088914-min.png.jpg" alt=""></a><h1>Shiny Office...</h1></div>
-    <div class="col-1"><a href="#"><img src="1000088900-min.png.jpg" alt=""></a><h1>Spring and A...</h1></div>
+  <div class="col-1"><img src="1000078420-min.jpg" alt=""><h1>items name</h1></div>
+  <div class="col-1"><img src="IMG-20251024-WA0004.jpg" alt=""><h1>items name</h1></div>
+  <div class="col-1"><img src="1000078420-min.jpg" alt=""><h1>items name</h1></div>
+  <div class="col-1"><img src="IMG-20251024-WA0004.jpg" alt=""><h1>items name</h1></div>
+  <div class="col-1"><img src="1000078420-min.jpg" alt=""><h1>items name</h1></div>
+  <div class="col-1"><img src="IMG-20251024-WA0004.jpg" alt=""><h1>items name</h1></div>
+  <div class="col-1"><img src="1000078420-min.jpg" alt=""><h1>items name</h1></div>
+  <div class="col-1"><img src="IMG-20251024-WA0004.jpg" alt=""><h1>items name</h1></div>
+  <div class="col-1"><img src="IMG-20251024-WA0004.jpg" alt=""><h1>items name</h1></div>
+  <div class="col-1"><img src="1000078420-min.jpg" alt=""><h1>items name</h1></div>
+    <div class="col-1"><img src="1000078420-min.jpg" alt=""><h1>items name</h1></div>
     
-    <div class="col-1"><a href="#"><img src="1000088910-min.png.jpg" alt=""></a><h1>US Wrists...</h1></div>
-  <div class="col-1"><a href="#"><img src="1000088905-min.png.jpg" alt=""></a></a><h1>Gold Shiny...</h1></div>
-  <div class="col-1"><a href="#"><img src="1000088903-min.png.jpg" alt=""></a><h1>Ladies Hill...</h1></div>
-  <div class="col-1"><a href="#"><img src="1000088909-min.png.jpg" alt=""></a><h1>unisex wrist...</h1></div>
-  <div class="col-1"><a href="#"><img src="1000088140-min.png.jpg" alt=""></a><h1>Summer Wears...</h1></div>
+    <div class="col-1"><img src="IMG-20251024-WA0004.jpg" alt=""><h1>items name</h1></div>
+  <div class="col-1"><img src="1000078420-min.jpg" alt=""><h1>items name</h1></div>
+  <div class="col-1"><img src="IMG-20251024-WA0004.jpg" alt=""><h1>items name</h1></div>
+  <div class="col-1"><img src="1000078420-min.jpg" alt=""><h1>items name</h1></div>
+  <div class="col-1"><img src="IMG-20251024-WA0004.jpg" alt=""><h1>items name</h1></div>
   </div>
 
     <div class="deals">
@@ -1328,29 +1195,26 @@ src="1000088759-min.png.jpg" alt=""></a></div>
   
    <div class="promo-section">
     <div class="promo-cards" id="promoCards">
-     <div class="singlet"><a href="#"><img src="1000078564-min.jpg" alt=""></a>
+     <div class="singlet"><img src="1000078564-min.jpg" alt="">
      <h1>items name</h1><p>$24.8⁷</p> <span>-14</span></div>
-      <div class="singlet"><a href="#"><img src="1000078420-min.jpg" alt=""></a><h1>items name</h1><p>$24.8⁷</p> <span>-14</span></div>
-      <div class="singlet"><a href="#"><img
- src="1000078420-min.jpg" alt=""></a><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
-      <div class="singlet"><a href="#"><img src="1000078564-min.jpg" alt=""></a><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
-      <div class="singlet"><a href="#"><img src="1000078420-min.jpg" alt=""></a><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
-      <div class="singlet"><a href="#"><img src="1000078564-min.jpg" alt=""></a><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
-      <div class="singlet"><a href="#"><img src="1000078564-min.jpg" alt=""></a><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
-       <div class="singlet"><a href="#"><img src="1000078564-min.jpg" alt=""></a><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
-      <div class="singlet"><a href="#"><img src="1000078564-min.jpg" alt=""></a><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
-      <div class="singlet"><a href="#"><img src="1000078564-min.jpg" alt=""></a><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
-      <div class="singlet"><a href="#"><img src="1000078420-min.jpg" alt=""></a><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
-      <div class="singlet"><a href="#"><img src="1000078564-min.jpg" alt=""></a><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
-      <div class="singlet"><a href="#"><img src="1000078564-min.jpg" alt=""></a><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
-       <div class="singlet"><a href="#"><img src="1000078564-min.jpg" alt=""></a><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
-      <div class="singlet"><a href="#"><img src="1000078564-min.jpg" alt=""></a><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
+      <div class="singlet"><img src="1000078420-min.jpg" alt=""><h1>items name</h1><p>$24.8⁷</p> <span>-14</span></div>
+      <div class="singlet"><img
+ src="1000078420-min.jpg" alt=""><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
+      <div class="singlet"><img src="1000078564-min.jpg" alt=""><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
+      <div class="singlet"><img src="1000078420-min.jpg" alt=""><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
+      <div class="singlet"><img src="1000078564-min.jpg" alt=""><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
+      <div class="singlet"><img src="1000078564-min.jpg" alt=""><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
+       <div class="singlet"><img src="1000078564-min.jpg" alt=""><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
+      <div class="singlet"><img src="1000078564-min.jpg" alt=""><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
+      <div class="singlet"><img src="1000078564-min.jpg" alt=""><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
+      <div class="singlet"><img src="1000078420-min.jpg" alt=""><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
+      <div class="singlet"><img src="1000078564-min.jpg" alt=""><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
+      <div class="singlet"><img src="1000078564-min.jpg" alt=""><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
+       <div class="singlet"><img src="1000078564-min.jpg" alt=""><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
+      <div class="singlet"><img src="1000078564-min.jpg" alt=""><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
       </div>
     </div>
-    
-    
-      
-       <div class="deals">
+    <div class="deals">
           <h6>Phone Deals <br>Black Friday Deals</h6>
       <h4 class="more">
          <a href="#">See All</a>
@@ -1360,40 +1224,28 @@ src="1000088759-min.png.jpg" alt=""></a></div>
   
    <div class="promo-section">
     <div class="promo-cards" id="promoCards">
-     <div class="singlet"><a href="#"><img src="1000078564-min.jpg" alt=""></a>
+     <div class="singlet"><img src="1000078564-min.jpg" alt="">
      <h1>items name</h1><p>$24.8⁷</p> <span>-14</span></div>
-      <div class="singlet"><a href="#"><img src="1000078420-min.jpg" alt=""></a><h1>items name</h1><p>$24.8⁷</p> <span>-14</span></div>
-      <div class="singlet"><a href="#"><img
- src="1000078420-min.jpg" alt=""></a><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
-      <div class="singlet"><a href="#"><img src="1000078564-min.jpg" alt=""></a><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
-      <div class="singlet"><a href="#"><img src="1000078420-min.jpg" alt=""></a><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
-      <div class="singlet"><a href="#"><img src="1000078564-min.jpg" alt=""></a><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
-      <div class="singlet"><a href="#"><img src="1000078564-min.jpg" alt=""></a><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
-       <div class="singlet"><a href="#"><img src="1000078564-min.jpg" alt=""></a><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
-      <div class="singlet"><a href="#"><img src="1000078564-min.jpg" alt=""></a><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
-      <div class="singlet"><a href="#"><img src="1000078564-min.jpg" alt=""></a><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
-      <div class="singlet"><a href="#"><img src="1000078420-min.jpg" alt=""></a><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
-      <div class="singlet"><a href="#"><img src="1000078564-min.jpg" alt=""></a><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
-      <div class="singlet"><a href="#"><img src="1000078564-min.jpg" alt=""></a><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
-       <div class="singlet"><a href="#"><img src="1000078564-min.jpg" alt=""></a><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
-      <div class="singlet"><a href="#"><img src="1000078564-min.jpg" alt=""></a><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
+      <div class="singlet"><img src="1000078420-min.jpg" alt=""><h1>items name</h1><p>$24.8⁷</p> <span>-14</span></div>
+      <div class="singlet"><img
+ src="1000078420-min.jpg" alt=""><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
+      <div class="singlet"><img src="1000078564-min.jpg" alt=""><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
+      <div class="singlet"><img src="1000078420-min.jpg" alt=""><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
+      <div class="singlet"><img src="1000078564-min.jpg" alt=""><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
+      <div class="singlet"><img src="1000078564-min.jpg" alt=""><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
+       <div class="singlet"><img src="1000078564-min.jpg" alt=""><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
+      <div class="singlet"><img src="1000078564-min.jpg" alt=""><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
+      <div class="singlet"><img src="1000078564-min.jpg" alt=""><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
+      <div class="singlet"><img src="1000078420-min.jpg" alt=""><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
+      <div class="singlet"><img src="1000078564-min.jpg" alt=""><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
+      <div class="singlet"><img src="1000078564-min.jpg" alt=""><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
+       <div class="singlet"><img src="1000078564-min.jpg" alt=""><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
+      <div class="singlet"><img src="1000078564-min.jpg" alt=""><h1>items name</h1><p>$27.8⁷</p> <span>-14</span></div>
       </div>
     </div>
 
 <footer>
-    <div class="productes-row">
-        <div class="col-1"><h1>Neo Company</h1></div>
-  <div class="col-1"><h1>Return Policy</h1></div>
-  <div class="col-1"><h1>Neo Stream</h1></div>
-  <div class="col-1"><h1>Affiliate</h1></div>
-  <div class="col-1"><h1>Delivery </h1></div>
-  <div class="col-1"><h1>Neo Books</h1></div>
-  <div class="col-1"><h1>Forum</h1></div>
-  <div class="col-1"><h1>Sellers Zone</h1></div>
-  </div>
-   <div class="copyright">
-      Copyright ©️ 2025|NEOSTORE
-  </div>
+  NEOSTORE demo • Built with HTML/CSS/JS • Replace PayPal sandbox client-id before going live
 </footer>
 
 <script>
@@ -1589,7 +1441,8 @@ function renderPayPalButton(){
     }
   }).render('#paypal-container');
 }
- /////////////////////////
+
+/////////////////////////
 // Dashboard
 function renderDashboard(){ const u=currentUser(); document.getElementById('dashboard-welcome').textContent = u ? `Hello, ${u.name} (${u.email})` : 'Not logged in'; }
 
@@ -1611,11 +1464,11 @@ function calculateDeliveryFee(country){
   const cart = getCart();
   const itemCount = cart.reduce((s,i)=>s+i.qty,0); if(itemCount===0) return 0;
   const c = (country||'').trim().toLowerCase();
-  let feePer2 = 25;
-  if(['ghana','nigeria','kenya','south africa','cameroon','tanzania','uganda','zambia','ethiopia','africa'].some(x=>c.includes(x))) feePer2=25;
+  let feePer2 = 30;
+  if(['ghana','nigeria','kenya','south africa','cameroon','tanzania','uganda','zambia','ethiopia','africa'].some(x=>c.includes(x))) feePer2=27;
   else if(['france','germany','italy','spain','uk','england','europe','sweden','netherlands'].some(x=>c.includes(x))) feePer2=18;
-  else if(['china','japan','india','thailand','philippines','asia','indonesia','malaysia','vietnam','pakistan'].some(x=>c.includes(x))) feePer2=20;
-  else if(['usa','united states','canada','mexico','america','brazil','argentina'].some(x=>c.includes(x))) feePer2=10;
+  else if(['china','japan','india','thailand','philippines','asia','indonesia','malaysia','vietnam','pakistan'].some(x=>c.includes(x))) feePer2=25;
+  else if(['usa','united states','canada','mexico','america','brazil','argentina'].some(x=>c.includes(x))) feePer2=15;
   else if(['turkey','greece','cyprus','mediterranean','israel','lebanon','morocco','tunisia','egypt'].some(x=>c.includes(x))) feePer2=22;
   return feePer2 * Math.ceil(itemCount/2);
 }
@@ -1713,8 +1566,7 @@ showPage = function(name){ originalShowPage(name); if(name==='cart') setTimeout(
     ul.style.display = 'none';
     return ul;
   }
-
-  // render matched products into the results UL
+    // render matched products into the results UL
   function renderResults(ul, matches){
     ul.innerHTML = '';
     if(!matches || matches.length === 0){
@@ -1848,49 +1700,6 @@ slider.addEventListener("touchend", () => running = true, { passive: true });
 
 
 
-/*----flash sales timer---*/
-
-  // Select the countdown <span> inside your .flash-sale
-  const countdownSpan = document.querySelector('.flash-sale span');
-
-  function updateCountdownToMidnight() {
-    const now = new Date();
-
-    // Set target time to next midnight
-    const midnight = new Date();
-    midnight.setHours(24, 0, 0, 0);
-
-    // Calculate the remaining time
-    const diff = midnight - now; // milliseconds
-
-    // Convert to hours, minutes, seconds
-    const hours = Math.floor(diff / 1000 / 3600);
-    const minutes = Math.floor((diff / 1000 % 3600) / 60);
-    const seconds = Math.floor(diff / 1000 % 60);
-
-    // Display with leading zeros
-    countdownSpan.textContent = 
-      `${String(hours).padStart(2, '0')}h:${String(minutes).padStart(2, '0')}m:${String(seconds).padStart(2, '0')}s`;
-
-    // If somehow negative (past midnight), reset instantly
-    if (diff <= 0) {
-      setTimeout(startCountdown, 1000);
-    }
-  }
-
-  function startCountdown() {
-    updateCountdownToMidnight();
-    setInterval(updateCountdownToMidnight, 1000);
-  }
-
-  // Start timer when page loads
-  startCountdown();
-
-
-
-
-
-
 
 
 </script>
@@ -1898,4 +1707,4 @@ slider.addEventListener("touchend", () => running = true, { passive: true });
 <!-- Font Awesome -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
-</html>       
+</html>
